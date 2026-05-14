@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang='DE'>
+
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
@@ -16,7 +17,7 @@
     <link rel='stylesheet' href="assets/css/style.css">
 </head>
 
-<body>
+<body onload="endlessScroll()">
     <header>
         <nav class="header-menu">
             <div class="left-side">
@@ -46,7 +47,7 @@
                         </button>
                     </div>
                     <button class="burger-menu" id="burgerBtn" onclick="toggleMenu()" aria-label="Navigation open"
-                        aria-expanded="false" aria-controls="navOverlay">                        
+                        aria-expanded="false" aria-controls="navOverlay">
                         <svg class="start-animation-svg start" width="44" height="38" viewBox="0 0 44 38" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 2H42" stroke="black" stroke-width="4" stroke-linecap="square" />
@@ -83,7 +84,6 @@
                             <path d="M5 28.856L20.3209 16.0002" stroke="black" stroke-width="4"
                                 stroke-linecap="square" />
                         </svg>
-
                         <svg class="back-animation-svg hidden" width="58" height="53" viewBox="0 0 58 53" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M39.8169 15.6733L55.1378 2.81759" stroke="black" stroke-width="4"
@@ -132,7 +132,7 @@
                     <div class="wrapper">
                         <p class="say-hi">Say Hi!</p>
                         <p class="overlay-mail">schoenemann.lars@t-online.de</p>
-                        <div class="overlay-icons">                       
+                        <div class="overlay-icons">
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -168,46 +168,49 @@
                 <p>schoenemann.lars@t-online.de</p>
             </div>
             <div class="right-side-animation">
-                    <svg class="step-svg"  width="116" height="180" viewBox="0 0 116 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_328_1463)">
-                            <path d="M33 17.1045L58 42.1045L83 17.1045" stroke="black" stroke-width="4" />
-                            <path d="M58 -50V42.1053" stroke="black" stroke-width="4" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_328_1463">
-                                <rect width="116" height="180" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    <svg class="step-svg hidden" width="116" height="180" viewBox="0 0 116 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M33 67.1045L58 92.1045L83 67.1045" stroke="black" stroke-width="4" />
-                        <path d="M58 0V92.1053" stroke="black" stroke-width="4" />
-                    </svg>
-                    <svg class="step-svg hidden" width="116" height="180" viewBox="0 0 116 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M33 145.105L58 170.105L83 145.105" stroke="black" stroke-width="4" />
-                        <path d="M58 78V170.105" stroke="black" stroke-width="4" />
-                    </svg>
-                    <svg class="step-svg hidden" width="116" height="180" viewBox="0 0 116 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_328_1537)">
-                            <path d="M58 127V219.105" stroke="black" stroke-width="4" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_328_1537">
-                                <rect width="116" height="180" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    <svg class="step-svg hidden" width="116" height="180" viewBox="0 0 116 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_328_1473)">
-                            <path d="M58 160V252.105" stroke="black" stroke-width="4" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_328_1473">
-                                <rect width="116" height="180" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                </div>
+                <svg class="endless-arrow hidden" viewBox="0 0 116 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_328_1463)">
+                        <path d="M33 17.1045L58 42.1045L83 17.1045" stroke="black" stroke-width="4" />
+                        <path d="M58 -50V42.1053" stroke="black" stroke-width="4" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_328_1463">
+                            <rect width="116" height="180" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+
+                <svg class="endless-arrow hidden" viewBox="0 0 116 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M33 67.1045L58 92.1045L83 67.1045" stroke="black" stroke-width="4" />
+                    <path d="M58 0V92.1053" stroke="black" stroke-width="4" />
+                </svg>
+
+                <svg class="endless-arrow hidden" viewBox="0 0 116 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M33 145.105L58 170.105L83 145.105" stroke="black" stroke-width="4" />
+                    <path d="M58 78V170.105" stroke="black" stroke-width="4" />
+                </svg>
+
+                <svg class="endless-arrow hidden" viewBox="0 0 116 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_328_1537)">
+                        <path d="M58 127V219.105" stroke="black" stroke-width="4" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_328_1537">
+                            <rect width="116" height="180" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+
+                <svg class="endless-arrow hidden" viewBox="0 0 116 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_328_1473)">
+                        <path d="M58 160V252.105" stroke="black" stroke-width="4" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_328_1473">
+                            <rect width="116" height="180" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
             </div>
             <div class="right-side">
                 <p>Scroll<br>Down</p>
@@ -603,4 +606,5 @@
     </section>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
