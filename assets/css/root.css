@@ -1,0 +1,30 @@
+html {
+    scroll-behavior: smooth;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-size-base: 1.375rem;
+
+    --color-primary: #000000;
+    --color-secondary: #00BC8F;
+    --color-thred: #4B47FF;
+    --color-four: #FF9900;
+    --color-bg: #FFFCF3;
+}
+
+body {
+    padding: 64px max(calc(50% - 720px), 64px);
+    margin: 0 auto;
+    font-family: 'Syne', system-ui, -apple-system, sans-serif;
+    font-size: var(--font-size-base);
+    color: var(--color-primary);
+    background-color: var(--color-bg);
+}
