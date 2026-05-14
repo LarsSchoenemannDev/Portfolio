@@ -44,12 +44,10 @@ function endlessScroll() {
         if (current >= frames.length) {
             current = 0;
         }
-    }, 300);
+    },100);
 }
 
-array.forEach((e, i) => {
 
-});
 
 
 document.addEventListener("keydown", (e) => {

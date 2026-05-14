@@ -365,6 +365,10 @@ h3 {
     h3 {
         margin: 0 0;
     }
+
+    h3:hover {
+        color: var(--color-secondary)
+    }
 }
 
 .about-me-content {
@@ -382,6 +386,19 @@ h3 {
 .about-me-right {
     display: flex;
     flex-direction: row;
+    position: relative;
+}
+
+.about-me-right:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 5px solid var(--color-primary);
+    transform: translate(24px, 24px);
+    z-index: 1;
 }
 
 article {
@@ -415,19 +432,27 @@ article {
 .about-me-button {
     display: flex;
     justify-content: center;
+    padding-top: 12px;
+    text-align: center;
 
     button {
         padding: 20px 90px;
         background: none;
-        border: 4px solid var(--color-primary);       
+        border: 4px solid var(--color-primary);
         font-family: 'Overpass';
         font-style: normal;
         font-weight: 400;
         font-size: 23px;
-        line-height: 120%;        
+        line-height: 120%;
         color: var(--color-primary);
+        transition: padding 0.2s ease-in-out;
+    }
+
+    button:hover {
+        padding: 20px 120px;
     }
 }
+
 
 .button-style {
     background-color: var(--color-bg);
@@ -440,13 +465,17 @@ article {
     line-height: 120%;
 }
 
+
+
 .arrow-right-side {
     display: flex;
     justify-content: flex-end;
     height: 300px;
+    padding: 70px 64px 0 0;
 }
 
 .skills {
+    margin-top: 180px;
     border: 4px solid var(--color-primary);
     padding: 40px 60px;
     position: relative;
@@ -454,12 +483,17 @@ article {
 
 .skills h3 {
     position: absolute;
-    top: -125px;
+    top: -45px;
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--color-bg);
     padding: 0 20px;
     white-space: nowrap;
+
+}
+
+.my-skills:hover{
+    color: var(--color-secondary);
 }
 
 .skills-grid {
