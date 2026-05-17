@@ -32,24 +32,6 @@ function playSvgAnimation(showGroup, hideGroup) {
     });
 }
 
-function endlessScroll() {
-    const frames = document.querySelectorAll(".endless-arrow");
-    let current = 0;
-    setInterval(() => {
-        frames.forEach(frame => {
-            frame.classList.add("hidden");
-        });
-        frames[current].classList.remove("hidden");
-        current++;
-        if (current >= frames.length) {
-            current = 0;
-        }
-    },100);
-}
-
-
-
-
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
         const overlay = document.getElementById("navOverlay");
@@ -72,17 +54,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
-// function playSvgAnimation(showGroup, hideGroup) {
-//     const framesToShow = document.querySelectorAll(showGroup);
-//     const framesToHide = document.querySelectorAll(hideGroup);
-//     setInterval(() => {
-//         framesToHide.forEach(svg => svg.classList.add("hidden"));
-//         framesToShow.forEach((svg, index) => {
-//             setTimeout(() => {
-//                 framesToShow.forEach(s => s.classList.add("hidden"));
-//                 svg.classList.remove("hidden");
-//             }, 1000 / 60);
-//         });
-//     }, 600);
-// }

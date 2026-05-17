@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    /* scroll-snap-type: y mandatory; */
 }
 
 *,
@@ -27,4 +28,7 @@ body {
     font-size: var(--font-size-base);
     color: var(--color-primary);
     background-color: var(--color-bg);
+    
+    
+
 }
