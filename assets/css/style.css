@@ -715,22 +715,6 @@ article {
     justify-content: flex-end;
 }
 
-.portfolio-left,
-.portfolio-right {
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 160px;
-}
-
-.portfolio-left {
-    justify-content: flex-start;
-}
-
-.portfolio-right {
-    justify-content: flex-end;
-}
-
 .portfolio-left:hover {
     .project-image::after {
         content: "";
@@ -831,7 +815,7 @@ article {
 
 .portfolio-right .project-arrow {
     right: auto;
-    left: -25px;
+    left: -50px;
 }
 
 .arrow1 {
@@ -842,10 +826,11 @@ article {
 .project-info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
     gap: 18px;
     padding-top: 50px;
-    padding-left: 75px;
+    padding-left: 160px;
     opacity: 0;
     flex: 1;
 
@@ -878,7 +863,11 @@ article {
         color: var(--color-primary);
     }
 }
-
+.project-info-right{
+    align-items: flex-end;
+    padding-right: 150px;
+    padding-left: 0;
+}
 .project-number {
     display: flex;
     justify-content: flex-start;
