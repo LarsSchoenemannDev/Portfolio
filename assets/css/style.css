@@ -14,17 +14,17 @@
 
 header {
     position: fixed;
-    width: 1440px;
     z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .header-menu {
-    max-width: 1440px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #0000;
-    box-sizing: border-box;
 }
 
 .left-side {
@@ -198,8 +198,6 @@ header {
     animation: bottomOut 0.3s linear forwards;
 }
 
-
-/* unten */
 @keyframes bottomIn {
     0% {
         width: 100%;
@@ -226,7 +224,6 @@ header {
 }
 
 
-/* links */
 @keyframes leftIn {
     from {
         height: 0;
@@ -332,10 +329,6 @@ h1 {
     padding-left: 36px;
 }
 
-.main-footer {
-    margin-top: 120px;
-}
-
 .rotate {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
@@ -420,7 +413,7 @@ h3 {
     right: 0;
     bottom: 0;
     border: 5px solid var(--color-primary);
-    transform: translate(24px, 24px);
+    animation: spin 0.2s linear forwards;
     z-index: 1;
 }
 
@@ -522,6 +515,7 @@ article {
     padding: 40px 60px;
     position: relative;
     scroll-margin-top: 200px;
+    font-family: "Overpass";
 }
 
 .skills h3 {
@@ -531,8 +525,14 @@ article {
     transform: translateX(-50%);
     background-color: var(--color-bg);
     padding: 0 20px;
-    white-space: nowrap;
-
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 78px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: var(--color-primary);
 }
 
 .my-skills:hover {
@@ -550,6 +550,7 @@ article {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 12px;
 
 }
 
@@ -604,19 +605,16 @@ article {
     }
 }
 
-
 .skills-footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     height: 240px;
-    width: 100%;
-    gap: 8px;
 }
 
 .skills-footer p {
     font-size: 20px;
-    font-family: "Overpass";
     padding: 8px;
 }
 
@@ -624,6 +622,7 @@ article {
     display: block;
     color: var(--color-secondary);
     text-decoration: none;
+    width: 120px;
 
 }
 
@@ -693,6 +692,16 @@ article {
         justify-content: center;
         flex-direction: column;
     }
+}
+
+.section-content p {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--color-primary);
 }
 
 .section-content>h2:hover {
@@ -863,11 +872,13 @@ article {
         color: var(--color-primary);
     }
 }
-.project-info-right{
+
+.project-info-right {
     align-items: flex-end;
     padding-right: 150px;
     padding-left: 0;
 }
+
 .project-number {
     display: flex;
     justify-content: flex-start;
@@ -926,6 +937,47 @@ article {
     border: 4px solid var(--color-primary);
     padding: 36px 28px 40px;
     flex: 1;
+
+    p {
+        margin-bottom: 12px;
+    }
+}
+
+article:hover {
+    border: 4px solid var(--color-secondary);
+
+    svg * {
+        fill: var(--color-secondary) !important;
+    }
+}
+
+article h3 {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--color-primary);
+}
+
+article p {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--color-primary);
+}
+
+blockquote {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    color: var(--color-primary);
 }
 
 .section-header article svg {
@@ -952,52 +1004,71 @@ article {
 }
 
 .section-header article span {
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.65;
     text-align: left;
 }
 
+
+.contact-wrapper {
+    height: 100dvh;
+    width: 100dvw;
+    background: var(--color-primary);
+    padding-top: 40px;
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+}
+
 .contact-section {
     position: relative;
-    background: #000;
-    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
-    padding: 120px 80px 60px;
-    margin-top: -60px;
-    color: white;
+    padding: 64px max(calc(50% - 720px), 64px);
+    padding-top: 120px;
+    color: var(--color-bg);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .contact-heading {
     font-size: 80px;
     font-weight: 900;
-    color: white;
-    margin: 0 0 60px 0;
-    line-height: 1;
+    color: var(--color-bg)
 }
 
 .contact-inner {
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 180px;
 }
 
 .contact-subtitle {
-    color: #2dd4a0;
-    font-size: 22px;
+    color: var(--color-secondary);
+    font-family: 'Overpass';
+    font-style: normal;
     font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--color-secondary);
     margin: 0 0 12px;
 }
 
 .contact-desc {
-    color: #fff;
-    font-size: 16px;
+    color: var(--color-bg);
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 120%;
+    text-align: center;
     margin: 0 0 40px;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 0;
-    text-align: left;
 }
 
 .contact-form input[type="text"],
@@ -1005,10 +1076,14 @@ article {
 .contact-form textarea {
     background: transparent;
     border: none;
-    border-bottom: 1px solid #555;
-    color: white;
-    font-size: 15px;
-    padding: 14px 4px;
+    border-bottom: 1px solid var(--color-btn-none);
+    color: var(--color-bg);
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    padding: 14px 12px;
     outline: none;
     width: 100%;
     font-family: inherit;
@@ -1017,76 +1092,85 @@ article {
 
 .contact-form textarea {
     resize: vertical;
-    min-height: 120px;
+    min-height: 160px;
     margin-bottom: 24px;
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: #888;
+    color: var(--color-bg);
 }
 
 .checkbox-label {
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    font-size: 13px;
-    color: #aaa;
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
     margin-bottom: 32px;
     cursor: pointer;
 }
 
+.checkbox-label input {
+    accent-color: var(--color-primary);
+}
+
 .checkbox-label input[type="checkbox"] {
     margin-top: 2px;
-    accent-color: #2dd4a0;
-    flex-shrink: 0;
+    accent-color: var(--color-secondary);
+
 }
 
 .policy-link {
-    color: #2dd4a0;
+    color: var(--color-secondary);
     text-decoration: none;
 }
 
 .contact-form button {
     background: transparent;
-    border: 1px solid #555;
-    color: white;
+    border: 4px solid var(--color-btn-none);
+    color: var(--color-bg);
     font-size: 16px;
     padding: 16px 40px;
     cursor: pointer;
     align-self: center;
     letter-spacing: 0.02em;
-    transition: background 0.2s, border-color 0.2s;
 }
 
 .contact-form button:hover {
-    background: #111;
-    border-color: #999;
+    background: var(--color-primary);
+    border-color: var(--color-bg);
 }
 
 .contact-footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-top: 80px;
 }
 
 .footer-left {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 24px;
 }
 
 .footer-logo {
     font-weight: 900;
     font-size: 20px;
-    border: 2px solid white;
+    border: 2px solid var(--color-bg);
     padding: 2px 6px;
 }
 
 .footer-copy {
-    font-size: 13px;
-    color: #aaa;
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 120%;
+    color: var(--color-bg);
 }
 
 .footer-right {
@@ -1096,7 +1180,7 @@ article {
 }
 
 .footer-right a {
-    color: white;
+    color: var(--color-bg);
     text-decoration: none;
     opacity: 0.8;
     transition: opacity 0.2s;
@@ -1108,16 +1192,16 @@ article {
 
 .footer-legal {
     font-size: 13px;
-    color: #aaa;
+    color: var(--color-bg);
 }
 
 .footer-legal a {
-    color: #aaa;
+    color: var(--color-bg);
     text-decoration: none;
 }
 
 .section-scroll {
-    min-height: 100dvh;
+    /* min-height: 100dvh; */
     scroll-margin-top: 15vh;
-    /* scroll-snap-align: center; */
+    scroll-snap-align: center;
 }
