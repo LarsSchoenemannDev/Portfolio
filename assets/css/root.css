@@ -12,27 +12,40 @@ html {
 }
 
 :root {
-    --font-size-base: 1.375rem;
-
     --color-primary: #000000;
     --color-secondary: #00BC8F;
     --color-thred: #4B47FF;
     --color-four: #FF9900;
     --color-bg: #FFFCF3;
     --color-btn-none: #BBBBBB;
+
+    --fs-normal: clamp(1rem, 1vw, 1rem);
+    --fs-18: clamp(1rem, 1.1vw, 1.125rem);
+    --fs-20: clamp(1.125rem, 1.2vw, 1.25rem);
+    --fs-22: clamp(1.25rem, 1.3vw, 1.375rem);
+    --fs-24: clamp(1.375rem, 1.4vw, 1.5rem);
+    --fs-45: clamp(2rem, 2.8vw, 2.813rem);
+    --fs-48: clamp(2.25rem, 3vw, 3rem);
+    --fs-78: clamp(3rem, 5vw, 4.875rem);
+    --fs-96: clamp(4rem, 6vw, 6rem);
+    --fs-128: clamp(5rem, 8vw, 8rem);
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Syne', system-ui, -apple-system, sans-serif;
-    font-size: var(--font-size-base);
+    font-size: var(--fs-normal);
     color: var(--color-primary);
     background-color: var(--color-bg);
 }
 
-header,
-main,
-section {
-    padding: 64px max(calc(50% - 720px)) 64px; 
+header {
+    padding: 64px clamp(32px, calc(50% - 720px), 100%) 64px;
+  
+}
+
+
+main {
+    padding: 64px clamp(32px, calc(50% - 720px), 100%) 64px;  
 }
