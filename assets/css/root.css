@@ -48,7 +48,7 @@ header {
     padding: 64px clamp(32px, calc(50% - 720px), 100%) 64px;  
 }
 
-main {
+main { 
     padding: 64px clamp(32px, calc(50% - 720px), 100%) 64px;  
 }
 
