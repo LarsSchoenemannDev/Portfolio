@@ -54,3 +54,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+function formValidation() {
+    let name = document.getElementById("contact-name");
+    let mail = document.getElementById("contact-email");
+    let message = document.getElementById("contact-message");
+    let check = document.getElementById("checkbox")
+    console.log(name, mail, message, check);
+
+    if (name.innerText === 0){
+        
+    }
+
+}

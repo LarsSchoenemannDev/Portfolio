@@ -11,6 +11,10 @@ html {
     box-sizing: border-box;
 }
 
+/* *{
+    outline: 1px solid red;    
+} */
+
 :root {
     --color-primary: #000000;
     --color-secondary: #00BC8F;
@@ -41,11 +45,10 @@ body {
 }
 
 header {
-    padding: 64px clamp(32px, calc(50% - 720px), 100%) 64px;
-  
+    padding: 64px clamp(32px, calc(50% - 720px), 100%) 64px;  
 }
-
 
 main {
     padding: 64px clamp(32px, calc(50% - 720px), 100%) 64px;  
 }
+
