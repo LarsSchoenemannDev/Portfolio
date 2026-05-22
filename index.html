@@ -13,14 +13,14 @@
         content="Frontend Developer specializing in JavaScript, TypeScript, and high-performance web development. Explore my latest projects." />
     <meta property="og:image" content="lars-schoenemann.de" />
     <title>Lars Schönemann</title>
-    <link rel="shortcut icon" href="assets\images\logo.png" type="image/x-icon">
+    <link rel="icon" type="image/svg+xml" href="assets\images\Logo.svg">
     <link rel='stylesheet' href="assets/css/root.css">
     <link rel='stylesheet' href="assets/css/style.css">
 </head>
 
 <body>
     <header>
-        <nav class=" header-menu" aria-label="Main navigation">
+        <nav class="header-menu" aria-label="Main navigation">
             <div class="left-side">
                 <svg style="width: 66.6px;" aria-label="LS Logo" role="img" data-name="Ebene 1"
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110.5 56.03">
@@ -161,7 +161,7 @@
         </div>
     </header>
     <main id="site-main">
-        <section class="header-main section-scroll" aria-label="Hero">
+        <section class="header-main heightDVH" aria-label="Hero">
             <div class="top-main">
                 <h1>Frontend <br>Developer</h1>
                 <div class="seperator-wrapper">
@@ -190,7 +190,7 @@
                 </div>
             </footer>
         </section>
-        <section id="aboutME" class="about-me section-scroll" aria-labelledby="aboutME-heading">
+        <section id="aboutME" class="about-me heightDVH" aria-labelledby="aboutME-heading">
             <h2 id="aboutME-heading">About me</h2>
             <div class="about-me-content">
                 <div class="about-me-left">
@@ -376,9 +376,11 @@
                             </defs>
                         </svg>
                     </div>
-                    <p>Don't see the skill you need?</p>
-                    <a href="#contact">Contact me</a>
-                    <p>I'm always ready to learn!</p>
+                    <div class="skills-footer-wrapper">
+                        <p>Don't see the skill you need?</p>
+                        <a href="#contact">Contact me</a>
+                        <p>I'm always ready to learn!</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -396,7 +398,7 @@
                 </defs>
             </svg>
         </div>
-        <section id="portfolio" class="section-header section-scroll" aria-labelledby="portfolio-heading">
+        <section id="portfolio" class="section-header" aria-labelledby="portfolio-heading">
             <div class="section-content">
                 <h2 id="portfolio-heading">Portfolio</h2>
                 <p>Explore a selection of my work here – Interact with projects to see my skills in action.</p>
@@ -404,7 +406,7 @@
             <div class="portfolio-projects">
                 <div class="portfolio-left">
                     <div class="project-image">
-                        <img src="./assets/images/join.png" alt="Join – Kanban task manager app">
+                        <img src="./assets/images/join.png" loading="lazy" alt="Join – Kanban task manager app">
                         <div class="project-arrow" aria-hidden="true">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
                                 <rect x="57.9414" y="24" width="48" height="48" rx="24"
@@ -425,8 +427,8 @@
                         <div class="button-wrapper">
                             <a href="https://github.com" target="_blank"
                                 rel="noopener noreferrer"><button>Github</button></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer"><button>
-                                    Demo</button></a>
+                            <a href="https://github.com" target="_blank"
+                                rel="noopener noreferrer"><button>Demo</button></a>
                         </div>
                     </div>
                     <div class="project-number" aria-label="Project 1 of 3">
@@ -434,22 +436,9 @@
                     </div>
                 </div>
                 <div class="portfolio-right">
-                    <div class="project-number" aria-label="Project 2 of 3">
-                        <p>02/03</p>
-                    </div>
-                    <div class="project-info project-info-right">
-                        <h4>El Pollo Loco</h4>
-                        <p><strong>HTML | CSS | JavaScript | JS OOP </strong></p>
-                        <p>A jump-and-run game based on object-oriented programming and Canva.</p>
-                        <div class="button-wrapper">
-                            <a href="https://github.com" target="_blank"
-                                rel="noopener noreferrer"><button>Github</button></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer"><button>
-                                    Demo</button></a>
-                        </div>
-                    </div>
                     <div class="project-image">
-                        <img src="./assets/images/el-pollo-loco.png" alt="El Pollo Loco – jump-and-run game">
+                        <img src="./assets/images/el-pollo-loco.png" loading="lazy"
+                            alt="El Pollo Loco – jump-and-run game">
                         <div class="project-arrow" aria-hidden="true">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
                                 <rect x="57.9414" y="24" width="48" height="48" rx="24"
@@ -462,10 +451,25 @@
                             </svg>
                         </div>
                     </div>
+                    <div class="project-info project-info-right">
+                        <h4>El Pollo Loco</h4>
+                        <p><strong>HTML | CSS | JavaScript | JS OOP </strong></p>
+                        <p>A jump-and-run game based on object-oriented programming and Canva.</p>
+                        <div class="button-wrapper">
+                            <a href="https://github.com" target="_blank"
+                                rel="noopener noreferrer"><button>Github</button></a>
+                            <a href="https://github.com" target="_blank"
+                                rel="noopener noreferrer"><button>Demo</button></a>
+                        </div>
+                    </div>
+                    <div class="project-number project-number-right" aria-label="Project 2 of 3">
+                        <p>02/03</p>
+                    </div>
                 </div>
                 <div class="portfolio-left">
                     <div class="project-image">
-                        <img src="./assets/images/pokedex.png" alt="Pokédex – app fetching data from the PokéAPI">
+                        <img src="./assets/images/pokedex.png" loading="lazy"
+                            alt="Pokédex – app fetching data from the PokéAPI">
                         <div class="project-arrow" aria-hidden="true">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
                                 <rect x="57.9414" y="24" width="48" height="48" rx="24"
@@ -479,24 +483,23 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <div class="wrapper">
-                            <h4>Pokédex</h4>
-                            <p><strong>HTML | CSS | JavaScript | REST API</strong></p>
-                            <p>A Pokédex app fetching data from the PokéAPI.</p>
-                            <div class="button-wrapper">
-                                <a href="https://github.com" target="_blank"
-                                    rel="noopener noreferrer"><button>Github</button></a>
-                                <a href="https://github.com" target="_blank" rel="noopener noreferrer"><button>
-                                        Demo</button></a>
-                            </div>
-                        </div>
-                        <div class="project-number" aria-label="Project 3 of 3">
-                            <p>03/03</p>
+                        <h4>Pokédex</h4>
+                        <p><strong>HTML | CSS | JavaScript | REST API</strong></p>
+                        <p>A Pokédex app fetching data from the PokéAPI.</p>
+                        <div class="button-wrapper">
+                            <a href="https://github.com" target="_blank"
+                                rel="noopener noreferrer"><button>Github</button></a>
+                            <a href="https://github.com" target="_blank"
+                                rel="noopener noreferrer"><button>Demo</button></a>
                         </div>
                     </div>
+                    <div class="project-number" aria-label="Project 3 of 3">
+                        <p>03/03</p>
+                    </div>
                 </div>
+            </div>
         </section>
-        <section id="references" class="section-header section-scroll" aria-labelledby="references-heading">
+        <section id="references" class="section-header" aria-labelledby="references-heading">
             <div class="section-content">
                 <h2 id="references-heading">References</h2>
                 <p>I thrive both independently and as part of a team. Here's what my colleagues have to say about
@@ -560,73 +563,119 @@
                 <form class="contact-form" action="https://formspree.io/f/xpqnqjbv" method="POST" novalidate>
                     <div class="form-group">
                         <label for="contact-name"></label>
-                        <input id="contact-name" type="text" name="name" placeholder="Your name" required
-                            autocomplete="name" />
+                        <input id="contactName" type="text" name="name" placeholder="Your name" required
+                            autocomplete="name" oninput="formValidation(id)" />
+                        <svg class="hidden" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.5247 0C5.6213 0 0 5.6213 0 12.5247C0 19.428 5.6213 25.0493 12.5247 25.0493C19.428 25.0493 25.0493 19.428 25.0493 12.5247C25.0493 5.6213 19.428 0 12.5247 0ZM13.9053 21.499C13.5108 21.8442 13.0671 22.0414 12.5247 22.0414C11.9822 22.0414 11.5385 21.8442 11.144 21.499C10.7495 21.1538 10.5523 20.6607 10.5523 20.0197C10.5523 19.4773 10.7495 19.0335 11.144 18.6391C11.5385 18.2446 11.9822 18.0473 12.574 18.0473C13.1164 18.0473 13.6095 18.2446 14.0039 18.6391C14.3984 19.0335 14.5957 19.4773 14.5957 20.0197C14.497 20.6607 14.2998 21.1538 13.9053 21.499ZM14.3984 7.84024L13.8067 14.3491C13.7574 15.1381 13.6095 15.7298 13.4122 16.1243C13.215 16.5187 12.8698 16.7653 12.426 16.7653C11.9329 16.7653 11.6371 16.568 11.4398 16.1736C11.2426 15.7791 11.144 15.1381 11.0454 14.3491L10.6016 8.03747C10.503 6.80473 10.503 5.91716 10.503 5.37475C10.503 4.63511 10.7002 4.0927 11.0947 3.64892C11.4892 3.25444 11.9822 3.0572 12.6233 3.0572C13.3629 3.0572 13.9053 3.30375 14.1519 3.84615C14.3984 4.38856 14.5464 5.1282 14.5464 6.1144C14.497 6.6568 14.497 7.24852 14.3984 7.84024Z"
+                                fill="#E61C40" />
+                        </svg>
+                        <svg class="hidden" width="25" height="25" viewBox="0 0 25 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.4717 0C5.61225 0 0 5.61225 0 12.4717C0 19.3878 5.61225 25 12.4717 25C19.3878 25 24.9433 19.3878 24.9433 12.4717C25 5.61225 19.3878 0 12.4717 0ZM20.1247 6.46258L11.9615 19.898C11.678 20.3515 11.2245 20.6916 10.6576 20.6916C10.6009 20.6916 10.5442 20.6916 10.4875 20.6916C9.97732 20.6916 9.52381 20.4649 9.18367 20.1247L5.04535 15.3061C4.42177 14.6259 4.47846 13.5488 5.21542 12.9252C5.89569 12.3016 7.02948 12.3583 7.59637 13.0952L10.2608 16.1565L17.1769 4.70522C17.6871 3.91157 18.7075 3.62812 19.5011 4.13832C20.3515 4.59184 20.5782 5.66893 20.1247 6.46258Z"
+                                fill="#70E61C" />
+                        </svg>
+                        <span id="requiredName" class="required hiddenBlock">Your Name is required</span>
                     </div>
                     <div class="form-group">
                         <label for="contact-email"></label>
-                        <input id="contact-email" type="email" name="email" placeholder="Your email" required
-                            autocomplete="email" />
+                        <input id="contactEmail" type="email" name="email" placeholder="Your email" required
+                            autocomplete="email" oninput="validateMail()" />
+                        <svg class="hidden" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.5247 0C5.6213 0 0 5.6213 0 12.5247C0 19.428 5.6213 25.0493 12.5247 25.0493C19.428 25.0493 25.0493 19.428 25.0493 12.5247C25.0493 5.6213 19.428 0 12.5247 0ZM13.9053 21.499C13.5108 21.8442 13.0671 22.0414 12.5247 22.0414C11.9822 22.0414 11.5385 21.8442 11.144 21.499C10.7495 21.1538 10.5523 20.6607 10.5523 20.0197C10.5523 19.4773 10.7495 19.0335 11.144 18.6391C11.5385 18.2446 11.9822 18.0473 12.574 18.0473C13.1164 18.0473 13.6095 18.2446 14.0039 18.6391C14.3984 19.0335 14.5957 19.4773 14.5957 20.0197C14.497 20.6607 14.2998 21.1538 13.9053 21.499ZM14.3984 7.84024L13.8067 14.3491C13.7574 15.1381 13.6095 15.7298 13.4122 16.1243C13.215 16.5187 12.8698 16.7653 12.426 16.7653C11.9329 16.7653 11.6371 16.568 11.4398 16.1736C11.2426 15.7791 11.144 15.1381 11.0454 14.3491L10.6016 8.03747C10.503 6.80473 10.503 5.91716 10.503 5.37475C10.503 4.63511 10.7002 4.0927 11.0947 3.64892C11.4892 3.25444 11.9822 3.0572 12.6233 3.0572C13.3629 3.0572 13.9053 3.30375 14.1519 3.84615C14.3984 4.38856 14.5464 5.1282 14.5464 6.1144C14.497 6.6568 14.497 7.24852 14.3984 7.84024Z"
+                                fill="#E61C40" />
+                        </svg>
+                        <svg class="hidden" width="25" height="25" viewBox="0 0 25 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.4717 0C5.61225 0 0 5.61225 0 12.4717C0 19.3878 5.61225 25 12.4717 25C19.3878 25 24.9433 19.3878 24.9433 12.4717C25 5.61225 19.3878 0 12.4717 0ZM20.1247 6.46258L11.9615 19.898C11.678 20.3515 11.2245 20.6916 10.6576 20.6916C10.6009 20.6916 10.5442 20.6916 10.4875 20.6916C9.97732 20.6916 9.52381 20.4649 9.18367 20.1247L5.04535 15.3061C4.42177 14.6259 4.47846 13.5488 5.21542 12.9252C5.89569 12.3016 7.02948 12.3583 7.59637 13.0952L10.2608 16.1565L17.1769 4.70522C17.6871 3.91157 18.7075 3.62812 19.5011 4.13832C20.3515 4.59184 20.5782 5.66893 20.1247 6.46258Z"
+                                fill="#70E61C" />
+                        </svg>
+                        <span id="requiredEmail" class="required hiddenBlock">Your email is required</span>
                     </div>
                     <div class="form-group">
                         <label for="contact-message"></label>
-                        <textarea id="contact-message" name="message" placeholder="Your message" rows="7"
-                            required></textarea>
+                        <textarea id="contactMessage" name="message" placeholder="Your message " rows="7" required
+                            oninput="formValidation(id)"></textarea>
+                        <svg class="hidden" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.5247 0C5.6213 0 0 5.6213 0 12.5247C0 19.428 5.6213 25.0493 12.5247 25.0493C19.428 25.0493 25.0493 19.428 25.0493 12.5247C25.0493 5.6213 19.428 0 12.5247 0ZM13.9053 21.499C13.5108 21.8442 13.0671 22.0414 12.5247 22.0414C11.9822 22.0414 11.5385 21.8442 11.144 21.499C10.7495 21.1538 10.5523 20.6607 10.5523 20.0197C10.5523 19.4773 10.7495 19.0335 11.144 18.6391C11.5385 18.2446 11.9822 18.0473 12.574 18.0473C13.1164 18.0473 13.6095 18.2446 14.0039 18.6391C14.3984 19.0335 14.5957 19.4773 14.5957 20.0197C14.497 20.6607 14.2998 21.1538 13.9053 21.499ZM14.3984 7.84024L13.8067 14.3491C13.7574 15.1381 13.6095 15.7298 13.4122 16.1243C13.215 16.5187 12.8698 16.7653 12.426 16.7653C11.9329 16.7653 11.6371 16.568 11.4398 16.1736C11.2426 15.7791 11.144 15.1381 11.0454 14.3491L10.6016 8.03747C10.503 6.80473 10.503 5.91716 10.503 5.37475C10.503 4.63511 10.7002 4.0927 11.0947 3.64892C11.4892 3.25444 11.9822 3.0572 12.6233 3.0572C13.3629 3.0572 13.9053 3.30375 14.1519 3.84615C14.3984 4.38856 14.5464 5.1282 14.5464 6.1144C14.497 6.6568 14.497 7.24852 14.3984 7.84024Z"
+                                fill="#E61C40" />
+                        </svg>
+                        <svg class="hidden" width="25" height="25" viewBox="0 0 25 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.4717 0C5.61225 0 0 5.61225 0 12.4717C0 19.3878 5.61225 25 12.4717 25C19.3878 25 24.9433 19.3878 24.9433 12.4717C25 5.61225 19.3878 0 12.4717 0ZM20.1247 6.46258L11.9615 19.898C11.678 20.3515 11.2245 20.6916 10.6576 20.6916C10.6009 20.6916 10.5442 20.6916 10.4875 20.6916C9.97732 20.6916 9.52381 20.4649 9.18367 20.1247L5.04535 15.3061C4.42177 14.6259 4.47846 13.5488 5.21542 12.9252C5.89569 12.3016 7.02948 12.3583 7.59637 13.0952L10.2608 16.1565L17.1769 4.70522C17.6871 3.91157 18.7075 3.62812 19.5011 4.13832C20.3515 4.59184 20.5782 5.66893 20.1247 6.46258Z"
+                                fill="#70E61C" />
+                        </svg>
+                        <span id="requiredMessage" class="required hiddenBlock">your message is empty</span>
                     </div>
                     <div class="form-group">
                         <label class="checkbox-label">
-                            <input id="checkbox" type="checkbox" required />
-                            I've read the <a href="/privacy" class="policy-link">privacy policy</a> and agree to the
-                            processing of my data as outlined.
+                            <input id="checkbox" type="checkbox" onchange="approvalPolicy()" required />
+                            <p>I've read the <a href="/privacy" class="policy-link">privacy policy</a>
+                            and agree to the
+                                processing of my data as outlined.</p>
                         </label>
+                        <span id="errorSpan" class="required hiddenBlock">Please accept the privacy policy.</span>
                     </div>
-                    <button type="submit">Send message</button>
+                    <button type="submit" disabled="" style="cursor: not-allowed;"">Send
+                        message</button>
                 </form>
             </div>
-            <div class="contact-footer">
-                <div class="footer-left">
-                    <svg id="Ebene_1" style="width: 75px; fill: #FFFCF3;" aria-label="LS Logo" role="img"
-                        data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110.5 56.03">
-                        <path
-                            d="M0,.09l16.95.2v6.58s-8.01-.09-8.01-.09v42.49s8.01.09,8.01.09v6.58S0,55.74,0,55.74V.09Z" />
-                        <path
-                            d="M110.5,56.03l-16.7-.2v-6.6s7.89.09,7.89.09V6.7s-7.89-.09-7.89-.09V0s16.7.2,16.7.2v55.84Z" />
-                        <g>
-                            <polygon
-                                points="50.05 35.55 33.37 35.33 33.26 .56 22.54 .41 22.67 42.52 48.14 42.86 50.05 35.55" />
-                            <path
-                                d="M86.52,36.27c-1.11-1.59-2.51-2.93-4.19-4.03-1.68-1.09-3.5-2.03-5.46-2.82-1.96-.78-3.78-1.54-5.46-2.28-1.68-.74-3.07-1.53-4.18-2.39-1.11-.85-1.67-1.91-1.67-3.17,0-1.34.59-2.41,1.8-3.19,1.2-.78,2.93-1.16,5.2-1.13,2.41.03,4.65.3,6.73.81,2.08.51,3.64,1.07,4.68,1.67l3.02-7.21c-1.65-.86-3.76-1.53-6.31-2.01-2.55-.48-5.27-.73-8.14-.77-2.5-.03-4.77.19-6.79.67-2.03.48-3.78,1.23-5.27,2.26-.24.17-.47.35-.7.53l-2.51,14.61c.09.15.18.3.28.45,1.11,1.61,2.51,2.96,4.19,4.06,1.68,1.09,3.5,2.02,5.46,2.78,1.96.76,3.78,1.5,5.46,2.22,1.68.72,3.07,1.5,4.18,2.36,1.11.86,1.67,1.96,1.67,3.3,0,1.76-.76,3.07-2.29,3.91-1.53.84-3.74,1.24-6.61,1.2-1.23-.02-2.42-.12-3.58-.3-1.16-.18-2.26-.41-3.29-.67-1.04-.27-1.97-.55-2.8-.86-.83-.3-1.5-.59-2.02-.85l-3.09,7.33c1.28.61,3.26,1.22,5.95,1.84,2.69.62,5.81.96,9.35,1.01,2.69.04,5.15-.2,7.39-.72,2.24-.52,4.15-1.33,5.73-2.44,1.58-1.11,2.8-2.51,3.67-4.2.87-1.69,1.3-3.71,1.29-6.06s-.57-4.32-1.68-5.92Z" />
-                        </g>
-                    </svg>
-                    <span class="footer-copy">© Lars Schönemann 2026</span>
-                </div>
-                <div class="footer-right">
-                    <a href="https://github.com/LarsSchoenemannDev" target="_blank" rel="noopener noreferrer"
-                        aria-label="GitHub profile">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M20 10.7407C11.7125 10.7407 5 17.4532 5 25.7407C4.9983 28.8896 5.98822 31.9591 7.82933 34.5137C9.67043 37.0683 12.2692 38.9783 15.257 39.9727C16.007 40.1032 16.2875 39.6532 16.2875 39.2587C16.2875 38.9032 16.268 37.7227 16.268 36.4657C12.5 37.1602 11.525 35.5477 11.225 34.7032C11.0555 34.2712 10.325 32.9407 9.6875 32.5837C9.1625 32.3032 8.4125 31.6087 9.668 31.5907C10.85 31.5712 11.693 32.6782 11.975 33.1282C13.325 35.3962 15.482 34.7587 16.343 34.3657C16.475 33.3907 16.868 32.7352 17.3 32.3602C13.9625 31.9852 10.475 30.6907 10.475 24.9532C10.475 23.3212 11.0555 21.9727 12.0125 20.9212C11.8625 20.5462 11.3375 19.0087 12.1625 16.9462C12.1625 16.9462 13.418 16.5532 16.2875 18.4852C17.5086 18.1463 18.7703 17.9757 20.0375 17.9782C21.3125 17.9782 22.5875 18.1462 23.7875 18.4837C26.6555 16.5337 27.9125 16.9477 27.9125 16.9477C28.7375 19.0102 28.2125 20.5477 28.0625 20.9227C29.018 21.9727 29.6 23.3032 29.6 24.9532C29.6 30.7102 26.0945 31.9852 22.757 32.3602C23.3 32.8282 23.7695 33.7282 23.7695 35.1352C23.7695 37.1407 23.75 38.7532 23.75 39.2602C23.75 39.6532 24.032 40.1212 24.782 39.9712C27.7595 38.9659 30.3469 37.0522 32.1799 34.4994C34.0128 31.9467 34.9991 28.8834 35 25.7407C35 17.4532 28.2875 10.7407 20 10.7407Z"
-                                fill="#FFFCF3" />
-                        </svg>
-                    </a>
-                    <a href="mailto:schoenemann.lars@t-online.de" aria-label="Send email to Lars Schönemann">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M6.5 13H33.5C33.8978 13 35 13 35 13C35 13 35 14.1022 35 14.5V38.5C35 38.8978 35 40 35 40C35 40 33.8978 40 33.5 40H6.5C6.10218 40 5 40 5 40C5 40 5 38.8978 5 38.5V14.5C5 14.1022 5 13 5 13C5 13 6.10218 13 6.5 13ZM32 19.357L20.108 30.007L8 19.324V37H32V19.357ZM8.7665 16L20.0915 25.993L31.253 16H8.7665Z"
-                                fill="#FFFCF3" />
-                        </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/lars-sch%C3%B6nemann-7626a9374/" target="_blank"
-                        rel="noopener noreferrer" aria-label="LinkedIn profile">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M30.5583 35.565H26.1167V28.6033C26.1167 26.9433 26.0833 24.8067 23.8 24.8067C21.485 24.8067 21.1317 26.6133 21.1317 28.4817V35.565H16.6883V21.25H20.955V23.2H21.0133C21.61 22.0767 23.06 20.8883 25.2267 20.8883C29.7267 20.8883 30.56 23.8517 30.56 27.7067V35.565H30.5583ZM11.6717 19.2917C10.3523 19.2917 9.28333 18.2217 9.28333 16.9017C9.28333 15.5817 10.3523 14.5117 11.6717 14.5117C12.991 14.5117 14.06 15.5817 14.06 16.9017C14.06 18.2217 12.991 19.2917 11.6717 19.2917ZM13.8983 35.565H9.44333V21.25H13.9V35.565H13.8983ZM32.7833 10H7.21667C5.99 10 5 10.9667 5 12.1617V37.8383C5 39.0333 5.99 40 7.21667 40H32.7833C34.01 40 35 39.0333 35 37.8383V12.1617C35 10.9667 34.01 10 32.7833 10Z"
-                                fill="#FFFCF3" />
-                        </svg>
-                    </a>
-                    <span class="footer-legal"><a href="/legal">Legal notice</a></span>
-                    <span class="footer-legal"><a href="/legal">Impressum</a></span>
-                </div>
+            <div class=" contact-footer">
+                        <div class="footer-left">
+                            <svg id="Ebene_1" style="width: 75px; fill: #FFFCF3;" aria-label="LS Logo" role="img"
+                                data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110.5 56.03">
+                                <path
+                                    d="M0,.09l16.95.2v6.58s-8.01-.09-8.01-.09v42.49s8.01.09,8.01.09v6.58S0,55.74,0,55.74V.09Z" />
+                                <path
+                                    d="M110.5,56.03l-16.7-.2v-6.6s7.89.09,7.89.09V6.7s-7.89-.09-7.89-.09V0s16.7.2,16.7.2v55.84Z" />
+                                <g>
+                                    <polygon
+                                        points="50.05 35.55 33.37 35.33 33.26 .56 22.54 .41 22.67 42.52 48.14 42.86 50.05 35.55" />
+                                    <path
+                                        d="M86.52,36.27c-1.11-1.59-2.51-2.93-4.19-4.03-1.68-1.09-3.5-2.03-5.46-2.82-1.96-.78-3.78-1.54-5.46-2.28-1.68-.74-3.07-1.53-4.18-2.39-1.11-.85-1.67-1.91-1.67-3.17,0-1.34.59-2.41,1.8-3.19,1.2-.78,2.93-1.16,5.2-1.13,2.41.03,4.65.3,6.73.81,2.08.51,3.64,1.07,4.68,1.67l3.02-7.21c-1.65-.86-3.76-1.53-6.31-2.01-2.55-.48-5.27-.73-8.14-.77-2.5-.03-4.77.19-6.79.67-2.03.48-3.78,1.23-5.27,2.26-.24.17-.47.35-.7.53l-2.51,14.61c.09.15.18.3.28.45,1.11,1.61,2.51,2.96,4.19,4.06,1.68,1.09,3.5,2.02,5.46,2.78,1.96.76,3.78,1.5,5.46,2.22,1.68.72,3.07,1.5,4.18,2.36,1.11.86,1.67,1.96,1.67,3.3,0,1.76-.76,3.07-2.29,3.91-1.53.84-3.74,1.24-6.61,1.2-1.23-.02-2.42-.12-3.58-.3-1.16-.18-2.26-.41-3.29-.67-1.04-.27-1.97-.55-2.8-.86-.83-.3-1.5-.59-2.02-.85l-3.09,7.33c1.28.61,3.26,1.22,5.95,1.84,2.69.62,5.81.96,9.35,1.01,2.69.04,5.15-.2,7.39-.72,2.24-.52,4.15-1.33,5.73-2.44,1.58-1.11,2.8-2.51,3.67-4.2.87-1.69,1.3-3.71,1.29-6.06s-.57-4.32-1.68-5.92Z" />
+                                </g>
+                            </svg>
+                            <span class="footer-copy">© Lars Schönemann 2026</span>
+                        </div>
+                        <div class="footer-right">
+                            <a href="https://github.com/LarsSchoenemannDev" target="_blank" rel="noopener noreferrer"
+                                aria-label="GitHub profile">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M20 10.7407C11.7125 10.7407 5 17.4532 5 25.7407C4.9983 28.8896 5.98822 31.9591 7.82933 34.5137C9.67043 37.0683 12.2692 38.9783 15.257 39.9727C16.007 40.1032 16.2875 39.6532 16.2875 39.2587C16.2875 38.9032 16.268 37.7227 16.268 36.4657C12.5 37.1602 11.525 35.5477 11.225 34.7032C11.0555 34.2712 10.325 32.9407 9.6875 32.5837C9.1625 32.3032 8.4125 31.6087 9.668 31.5907C10.85 31.5712 11.693 32.6782 11.975 33.1282C13.325 35.3962 15.482 34.7587 16.343 34.3657C16.475 33.3907 16.868 32.7352 17.3 32.3602C13.9625 31.9852 10.475 30.6907 10.475 24.9532C10.475 23.3212 11.0555 21.9727 12.0125 20.9212C11.8625 20.5462 11.3375 19.0087 12.1625 16.9462C12.1625 16.9462 13.418 16.5532 16.2875 18.4852C17.5086 18.1463 18.7703 17.9757 20.0375 17.9782C21.3125 17.9782 22.5875 18.1462 23.7875 18.4837C26.6555 16.5337 27.9125 16.9477 27.9125 16.9477C28.7375 19.0102 28.2125 20.5477 28.0625 20.9227C29.018 21.9727 29.6 23.3032 29.6 24.9532C29.6 30.7102 26.0945 31.9852 22.757 32.3602C23.3 32.8282 23.7695 33.7282 23.7695 35.1352C23.7695 37.1407 23.75 38.7532 23.75 39.2602C23.75 39.6532 24.032 40.1212 24.782 39.9712C27.7595 38.9659 30.3469 37.0522 32.1799 34.4994C34.0128 31.9467 34.9991 28.8834 35 25.7407C35 17.4532 28.2875 10.7407 20 10.7407Z"
+                                        fill="#FFFCF3" />
+                                </svg>
+                            </a>
+                            <a href="mailto:schoenemann.lars@t-online.de" aria-label="Send email to Lars Schönemann">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.5 13H33.5C33.8978 13 35 13 35 13C35 13 35 14.1022 35 14.5V38.5C35 38.8978 35 40 35 40C35 40 33.8978 40 33.5 40H6.5C6.10218 40 5 40 5 40C5 40 5 38.8978 5 38.5V14.5C5 14.1022 5 13 5 13C5 13 6.10218 13 6.5 13ZM32 19.357L20.108 30.007L8 19.324V37H32V19.357ZM8.7665 16L20.0915 25.993L31.253 16H8.7665Z"
+                                        fill="#FFFCF3" />
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/lars-sch%C3%B6nemann-7626a9374/" target="_blank"
+                                rel="noopener noreferrer" aria-label="LinkedIn profile">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M30.5583 35.565H26.1167V28.6033C26.1167 26.9433 26.0833 24.8067 23.8 24.8067C21.485 24.8067 21.1317 26.6133 21.1317 28.4817V35.565H16.6883V21.25H20.955V23.2H21.0133C21.61 22.0767 23.06 20.8883 25.2267 20.8883C29.7267 20.8883 30.56 23.8517 30.56 27.7067V35.565H30.5583ZM11.6717 19.2917C10.3523 19.2917 9.28333 18.2217 9.28333 16.9017C9.28333 15.5817 10.3523 14.5117 11.6717 14.5117C12.991 14.5117 14.06 15.5817 14.06 16.9017C14.06 18.2217 12.991 19.2917 11.6717 19.2917ZM13.8983 35.565H9.44333V21.25H13.9V35.565H13.8983ZM32.7833 10H7.21667C5.99 10 5 10.9667 5 12.1617V37.8383C5 39.0333 5.99 40 7.21667 40H32.7833C34.01 40 35 39.0333 35 37.8383V12.1617C35 10.9667 34.01 10 32.7833 10Z"
+                                        fill="#FFFCF3" />
+                                </svg>
+                            </a>
+                        </div>
+            </div>
+            <div class="footer-wrapper-legal">
+                <span class="footer-legal"><a href="/legal">Legal notice</a></span>                
             </div>
         </div>
     </footer>

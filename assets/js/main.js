@@ -1,5 +1,4 @@
-// playSvgAnimation(".right-side-animation .step-svg", ".right-side-animation .step-svg");
-
+const valid = { name: false, mail: false, message: false, policy: false }
 
 function toggleMenu() {
     const overlay = document.getElementById("navOverlay");
@@ -54,15 +53,74 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-function formValidation() {
-    let name = document.getElementById("contact-name");
-    let mail = document.getElementById("contact-email");
-    let message = document.getElementById("contact-message");
-    let check = document.getElementById("checkbox")
-    console.log(name, mail, message, check);
+function formValidation(inputId) {
+    let minLength = 3;
+    let input = document.getElementById(inputId);
 
-    if (name.innerText === 0){
+    let errorIcon = input.nextElementSibling;
+    let successIcon = errorIcon.nextElementSibling;
+    let requiredText = successIcon.nextElementSibling;
+
+    if (input.value.trim().length >= minLength) {
+        successIcon.classList.remove("hidden");
+        errorIcon.classList.add("hidden");
+        requiredText.classList.add("hiddenBlock");
+        valid[input["name"]] = true
+    } else {
+        errorIcon.classList.remove("hidden");
+        successIcon.classList.add("hidden");
+        requiredText.classList.remove("hiddenBlock");
+        valid[input["name"]] = false
+    }
+    handleSubmit();
+}
+
+function validateMail() {
+    let mail = document.getElementById("contactEmail");
+
+    let errorIcon = mail.nextElementSibling;
+    let successIcon = errorIcon.nextElementSibling;
+    let requiredText = successIcon.nextElementSibling;
+
+    let mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (mailRegex.test(mail.value)) {
+        successIcon.classList.remove("hidden");
+        errorIcon.classList.add("hidden");
+        requiredText.classList.add("hiddenBlock");
+        valid.mail = true;
+    } else {
+        errorIcon.classList.remove("hidden");
+        successIcon.classList.add("hidden");
+        requiredText.classList.remove("hiddenBlock");
+        valid.mail = false;
+    }
+    handleSubmit();
+}
+
+function approvalPolicy() {
+    let button = document.getElementById("checkbox")
+    let errorSpan = document.getElementById("errorSpan")
+    if (button.checked) {
+        valid.policy = true;
+        errorSpan.classList.add("hiddenBlock")
+    } else {
+        valid.policy = false;
+        errorSpan.classList.remove("hiddenBlock")
+    }
+    handleSubmit()
+}
+
+function handleSubmit() {
+    let button = document.querySelector('button[type="submit"]');
+    let requiredHidden = document.querySelectorAll(".required")
+    let allValid = Object.values(valid).every(e => e === true);
+    if (allValid) {
+        button.disabled = false;
+        button.style.cursor = "pointer";
+    } else {
+        button.disabled = true;
+        button.style.cursor = "not-allowed";
         
     }
-
 }

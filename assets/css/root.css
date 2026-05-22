@@ -14,7 +14,6 @@ html {
 /* *{
     outline: 1px solid red;    
 } */
-
 :root {
     --color-primary: #000000;
     --color-secondary: #00BC8F;
@@ -25,14 +24,14 @@ html {
 
     --fs-normal: clamp(1rem, 1vw, 1rem);
     --fs-18: clamp(1rem, 1.1vw, 1.125rem);
-    --fs-20: clamp(1.125rem, 1.2vw, 1.25rem);
-    --fs-22: clamp(1.25rem, 1.3vw, 1.375rem);
+    --fs-20: clamp(1.25rem, 1.2vw, 1.25rem);
+    --fs-22: clamp(1.300rem, 1.3vw, 1.375rem);
     --fs-24: clamp(1.375rem, 1.4vw, 1.5rem);
-    --fs-45: clamp(2rem, 2.8vw, 2.813rem);
-    --fs-48: clamp(2.25rem, 3vw, 3rem);
-    --fs-78: clamp(3rem, 5vw, 4.875rem);
-    --fs-96: clamp(4rem, 6vw, 6rem);
-    --fs-128: clamp(5rem, 8vw, 8rem);
+    --fs-45: clamp(1.5rem, 2.8vw, 2.813rem);
+    --fs-48: clamp(1.75rem, 3vw, 3rem);
+    --fs-78: clamp(2rem, 5vw, 4.875rem);
+    --fs-96: clamp(3rem, 6vw, 6rem);
+    --fs-128: clamp(4rem, 8vw, 8rem);
 }
 
 body {
@@ -42,6 +41,8 @@ body {
     font-size: var(--fs-normal);
     color: var(--color-primary);
     background-color: var(--color-bg);
+    display: grid;
+    gap: 5px;
 }
 
 header {
@@ -50,5 +51,13 @@ header {
 
 main { 
     padding: 64px clamp(32px, calc(50% - 720px), 100%) 64px;  
+}
+
+section{
+    min-height: 100dvh;
+    border: 2px solid greenyellow;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 
