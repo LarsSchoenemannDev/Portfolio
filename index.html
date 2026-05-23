@@ -119,13 +119,16 @@
         <div class="nav-overlay" id="navOverlay" aria-hidden="true">
             <div class="nav-overlay-inner">
                 <nav class="overlay-nav" aria-label="Overlay navigation">
-                    <div class="menu-item"><a href="#aboutME" onclick="toggleMenu()">About me</a></div>
-                    <div class="menu-item"><a href="#mySkills" onclick="toggleMenu()">My skills</a></div>
-                    <div class="menu-item"><a href="#portfolio" onclick="toggleMenu()">Portfolio</a></div>
+                    <div class="menu-item"><a href="#aboutME" onclick="toggleMenu()" data-i18n="nav.about">About me</a>
+                    </div>
+                    <div class="menu-item"><a href="#mySkills" onclick="toggleMenu()" data-i18n="nav.skills">My
+                            skills</a></div>
+                    <div class="menu-item"><a href="#portfolio" onclick="toggleMenu()"
+                            data-i18n="nav.portfolio">Portfolio</a></div>
                 </nav>
                 <div class="overlay-footer">
                     <div class="wrapper">
-                        <a href="#contact" class="say-hi" onclick="toggleMenu()">Say Hi!</a>
+                        <a href="#contact" class="say-hi" onclick="toggleMenu()" data-i18n="nav.sayhi">Say Hi!</a>
                         <p class="overlay-mail">schoenemann.lars@t-online.de</p>
                         <div class="overlay-icons">
                             <a href="https://github.com/LarsSchoenemannDev" target="_blank" rel="noopener noreferrer"
@@ -163,7 +166,7 @@
     <main id="site-main">
         <section class="header-main heightDVH" aria-label="Hero">
             <div class="top-main">
-                <h1>Frontend <br>Developer</h1>
+                <h1 data-i18n="hero.title">Frontend <br>Developer</h1>
                 <div class="seperator-wrapper">
                     <div class="seperator"></div>
                     <h4 class="name">Lars Schöenemann</h4>
@@ -182,7 +185,6 @@
                                 <path d="M58 0V92.1053" stroke="black" stroke-width="4" />
                             </svg>
                         </div>
-
                     </div>
                     <div class="right-side-text">
                         <p>Scroll<br>Down</p>
@@ -191,15 +193,14 @@
             </footer>
         </section>
         <section id="aboutME" class="about-me heightDVH" aria-labelledby="aboutME-heading">
-            <h2 id="aboutME-heading">About me</h2>
+            <h2 id="aboutME-heading" data-i18n="about.heading">About me</h2>
             <div class="about-me-content">
                 <div class="about-me-left">
-                    <article>
+                    <article data-i18n="about.text">
                         At some point I started taking websites apart just to understand how they work. Today I build
-                        them
-                        myself – with HTML, CSS and JavaScript. Since then I've been constantly improving and always
-                        looking
-                        for the cleanest solution.
+                        them myself – with HTML, CSS and JavaScript. Since then I've been constantly improving and
+                        always
+                        looking for the cleanest solution.
                     </article>
                     <div class="article-svg">
                         <p>
@@ -215,7 +216,7 @@
                                         fill="#1C1B1F" />
                                 </g>
                             </svg>
-                            Based in Rinteln
+                            <span data-i18n="about.location">Based in Rinteln</span>
                         </p>
                         <p>
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
@@ -230,10 +231,10 @@
                                         fill="#1C1B1F" />
                                 </g>
                             </svg>
-                            Open to work Remote
+                            <span data-i18n="about.remote">Open to work Remote</span>
                         </p>
                         <div class="button-wrapper">
-                            <button class="buttonN">Let's talk</button>
+                            <button class="buttonN" data-i18n="about.cta">Let's talk</button>
                         </div>
                     </div>
                 </div>
@@ -241,16 +242,16 @@
                     <img class="img-me" src="./assets/images/Vektorbilde.png" alt="Portrait of Lars Schönemann">
                 </div>
             </div>
-            <div class="arrow-right-side" aria-hidden="true">
-                <svg width="235" height="235" viewBox="0 0 235 235" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M41.3149 110.893V193.519H123.942" stroke="black" stroke-width="4" />
-                    <path d="M193.521 41.3135L41.3135 193.521" stroke="black" stroke-width="4" />
-                </svg>
-            </div>
         </section>
+        <div class="arrow-right-side" aria-hidden="true">
+            <svg width="235" height="235" viewBox="0 0 235 235" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M41.3149 110.893V193.519H123.942" stroke="black" stroke-width="4" />
+                <path d="M193.521 41.3135L41.3135 193.521" stroke="black" stroke-width="4" />
+            </svg>
+        </div>
         <section id="mySkills" aria-labelledby="mySkills-heading">
             <div class="skills">
-                <h2 id="mySkills-heading" class="my-skills">My skills</h2>
+                <h2 id="mySkills-heading" class="my-skills" data-i18n="skills.heading">My skills</h2>
                 <div class="skills-grid">
                     <div class="skill-item"><svg width="68" height="75" viewBox="0 0 68 75" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -303,13 +304,7 @@
                     <div class="skill-item">
                         <svg width="71" height="75" viewBox="0 0 71 75" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
-                                d="M26.3893 68.6146C21.3253 67.1931 16.8717 64.5758 12.9832 60.9206C11.7624 61.3493 10.519 61.778 9.25303 62.1841C8.66524 62.3646 8.07745 62.2969 7.46706 62.0713C6.38191 61.6652 5.7263 60.8755 5.25155 59.9052C4.59594 58.6191 3.75947 57.4458 3.10386 56.1597C2.51608 54.9639 1.657 53.926 1.15964 52.685C0.910965 52.0758 0.255356 51.6697 0.255356 50.9025C-0.332432 49.9549 0.232749 49.12 0.571857 48.2852C0.662286 48.0596 0.775322 47.7662 0.978787 47.676C1.79265 47.315 2.19958 46.5027 2.87779 46.0063C3.19429 45.7807 3.5334 45.5325 3.89512 45.2617C3.37515 42.667 2.92301 40.0722 2.92301 37.4097C2.92301 34.7699 3.39776 32.2202 3.89512 29.6931C3.01344 28.8809 2.19958 28.0912 1.3405 27.3466C0.458821 26.5794 -0.0611452 25.6318 0.0518909 24.639C0.119713 24.0975 0.277963 23.5108 0.54925 23.0596C1.38572 21.7283 2.15436 20.3294 2.96822 18.9756C3.62383 17.8926 4.18901 16.7644 4.91244 15.704C5.29676 15.1625 5.52284 14.5307 5.90716 13.9666C6.6532 12.9061 8.14527 12.3872 9.36606 12.7482C10.4512 13.0641 11.4685 13.5379 12.5763 13.741C12.6893 13.7635 12.7798 13.9215 12.8928 14.0343C16.8038 10.4016 21.2575 7.80686 26.3667 6.29513C26.5702 5.68592 26.6154 5.03159 26.864 4.39982C27.0449 3.92599 26.9997 3.33935 27.0901 2.8204C27.3388 1.46661 28.1753 0.676895 29.3734 0.270758C29.803 0.135379 30.2325 0 30.7525 0C33.9175 0.0451264 37.0825 0.0451264 40.2475 0C41.1518 0 41.9204 0.361011 42.6439 0.767148C43.2995 1.1056 43.6612 1.82762 43.8421 2.50451C44.1586 3.74549 44.3394 5.00903 44.5881 6.31769C49.6747 7.76173 54.1283 10.3565 58.0168 14.0117C59.2376 13.583 60.481 13.1543 61.747 12.7482C62.3348 12.5677 62.9226 12.6354 63.5329 12.861C64.6181 13.2671 65.2737 14.0569 65.7485 15.0271C66.4041 16.3132 67.2405 17.4865 67.8961 18.7726C68.4839 19.9684 69.343 21.0063 69.8404 22.2473C70.089 22.8565 70.7446 23.2626 70.7446 24.0298C71.3324 24.9774 70.7673 25.8123 70.4281 26.6471C70.3377 26.8727 70.2247 27.1661 70.0212 27.2563C69.2074 27.6173 68.8004 28.4296 68.1222 28.926C67.8057 29.1516 67.4666 29.3998 67.1049 29.6706C67.6248 32.2653 68.077 34.8601 68.077 37.5226C68.077 40.1625 67.6701 42.7121 67.1049 45.2392C67.9866 46.0514 68.8004 46.8412 69.6595 47.5857C70.5412 48.3529 71.0611 49.3005 70.9481 50.2933C70.8803 50.8348 70.7447 51.4215 70.4508 51.8727C69.6369 53.1814 68.8682 54.5352 68.077 55.8664C67.0823 57.5135 66.2684 59.296 65.1155 60.8529C64.912 61.7103 64.0981 61.778 63.5103 62.0939C62.8773 62.4323 62.2443 62.3421 61.5435 62.139C60.5036 61.8457 59.5089 61.3267 58.4237 61.1913C58.3107 61.1688 58.2203 61.0108 58.1072 60.898C54.1962 64.5758 49.7652 67.1931 44.5881 68.6597C44.3394 69.8782 44.1133 71.1417 43.8421 72.3827C43.5708 73.6011 42.7569 74.3682 41.604 74.7292C41.1744 74.8646 40.7223 75 40.2249 75C37.0599 74.9549 33.8949 74.9549 30.7299 75C29.8256 75 29.0569 74.639 28.3335 74.2329C27.6779 73.8944 27.2936 73.1724 27.1579 72.4955C26.9093 71.1643 26.6606 69.9233 26.3893 68.6146ZM27.8588 48.7365C28.3109 48.4883 28.8309 48.3303 28.8535 47.7888C28.8987 46.9765 29.0117 46.1417 28.8309 45.3745C28.5144 44.0659 27.9492 42.8023 27.6101 41.4937C27.384 40.6588 26.8867 39.8691 26.9093 38.9666C26.1858 37.1841 25.7337 35.3114 25.1233 33.5063C24.6259 32.0171 24.2642 30.4829 23.7216 29.0162C23.4277 28.204 23.3599 27.3014 22.8174 26.5794C22.7721 26.5117 22.7495 26.4666 22.7495 26.4666C22.1391 26.0605 21.5061 26.1958 20.9636 26.1958C20.6471 26.4892 20.3758 26.7374 20.1271 26.963C20.1045 27.685 19.5845 28.2491 19.675 28.9486C18.8837 30.7085 18.5446 32.6038 17.889 34.4088C17.5499 35.3339 17.3464 36.2816 17.0751 37.2292C16.8264 38.1769 16.2839 39.0343 16.2839 40.0496C15.4248 41.9675 14.9953 44.0208 14.3623 46.0289C14.204 46.5253 14.1136 46.9991 14.4301 47.4729C14.5205 47.6083 14.4753 47.8114 14.4753 47.7888C14.837 48.1724 15.1083 48.4431 15.3344 48.7139C15.7639 48.7139 16.216 48.7139 16.6908 48.7139C17.0073 48.3078 17.3238 47.9242 17.6177 47.5406C17.5499 46.2545 17.8212 45.3971 18.4089 44.0208C20.6245 44.0208 22.84 44.0208 25.0555 44.0208C25.2363 44.7428 25.3268 45.4422 25.5754 46.0966C25.6885 46.3673 25.8015 46.6381 25.7563 46.9088C25.6885 47.7437 25.9598 48.398 26.9093 48.7139C27.1353 48.7365 27.4744 48.7365 27.8588 48.7365ZM33.1488 48.7365C33.7592 48.6913 34.4601 48.8718 34.9574 48.3755C35.1383 48.1498 35.2965 47.9242 35.5226 47.6083C35.5226 45.352 35.5226 42.9829 35.5226 40.6137C37.1729 40.6137 38.8007 40.546 40.4058 40.6363C41.3779 40.6814 42.1691 40.3881 42.9378 39.9143C43.2995 39.6886 43.616 39.3502 43.9325 39.0343C44.769 38.222 45.1759 37.2292 45.1985 36.056C45.1985 34.2058 45.1985 32.3782 45.1985 30.528C45.1985 30.2572 45.1307 29.9639 45.0629 29.6931C44.8142 28.7229 44.2942 28.0009 43.5934 27.3691C42.7795 26.6245 41.83 26.1733 40.6997 26.1733C38.1677 26.1733 35.6583 26.1733 33.1036 26.1733C32.855 26.444 32.6063 26.7148 32.3124 26.9856C32.3124 33.935 32.3124 40.9296 32.3124 47.9468C32.6063 48.1949 32.8776 48.4657 33.1488 48.7365ZM49.426 48.7365C50.9859 48.7365 52.5684 48.7365 54.1283 48.7365C54.3996 48.4657 54.6709 48.1949 54.9422 47.9468C54.9422 47.5181 54.9422 47.1119 54.9422 46.6832C54.9422 46.6381 54.9422 46.6155 54.9422 46.593C54.6031 45.9612 54.0831 45.5776 53.4049 45.5099C53.4049 40.1173 53.4049 34.7473 53.4049 29.4901C53.9023 29.2419 54.3318 29.0162 54.8292 28.7455C54.897 28.1588 54.9422 27.5496 54.9874 27.1209C54.6257 26.7148 54.377 26.4215 54.1736 26.1958C52.5458 26.1958 50.9633 26.1958 49.5617 26.1958C49.1774 26.5343 48.9061 26.7825 48.567 27.0984C48.6348 27.6399 48.7252 28.2491 48.793 28.7681C49.3356 29.0388 49.7652 29.2644 50.1495 29.4675C50.1495 34.8375 50.1495 40.2076 50.1495 45.5325C49.9234 45.5776 49.6747 45.5325 49.5843 45.6453C49.2678 45.9612 48.7252 46.0514 48.6122 46.5704C48.6122 47.0217 48.6122 47.4729 48.6122 47.9242C48.8835 48.1949 49.1548 48.4657 49.426 48.7365Z"
-                                fill="black" />
-                            <path
-                                d="M23.8575 40.5683C22.5237 40.6134 21.122 40.636 19.7204 40.6811C19.6751 40.6811 19.6073 40.7714 19.4717 40.8842C19.4943 39.4853 20.2855 38.3571 20.376 37.071C21.0542 35.9428 21.122 34.6116 21.5742 33.3481C21.7098 33.4835 21.9133 33.6188 21.9133 33.7317C21.9359 34.7019 22.501 35.5367 22.6819 36.4618C22.8175 37.0936 23.1793 37.7028 23.2697 38.3345C23.3601 39.1468 23.9027 39.756 23.8575 40.5683Z"
-                                fill="black" />
-                            <path
-                                d="M42.0563 36.1917C41.898 36.4399 41.7624 36.6881 41.5815 36.9138C41.265 37.2748 40.8581 37.4778 40.3381 37.4553C38.7556 37.4327 37.1731 37.4553 35.5454 37.4553C35.5454 34.7703 35.5454 32.0852 35.5454 29.3325C37.1957 29.3325 38.8913 29.31 40.5642 29.3325C41.3555 29.3551 42.0337 30.1674 42.0563 31.0248C42.0563 32.4463 42.0563 33.8677 42.0563 35.2892C42.0563 35.6051 42.0563 35.8984 42.0563 36.1917Z"
+                                d="M26.3893 68.6146C21.3253 67.1931 16.8717 64.5758 12.9832 60.9206C11.7624 61.3493 10.519 61.778 9.25303 62.1841C8.66524 62.3646 8.07745 62.2969 7.46706 62.0713C6.38191 61.6652 5.7263 60.8755 5.25155 59.9052C4.59594 58.6191 3.75947 57.4458 3.10386 56.1597C2.51608 54.9639 1.657 53.926 1.15964 52.685C0.910965 52.0758 0.255356 51.6697 0.255356 50.9025C-0.332432 49.9549 0.232749 49.12 0.571857 48.2852C0.662286 48.0596 0.775322 47.7662 0.978787 47.676C1.79265 47.315 2.19958 46.5027 2.87779 46.0063C3.19429 45.7807 3.5334 45.5325 3.89512 45.2617C3.37515 42.667 2.92301 40.0722 2.92301 37.4097C2.92301 34.7699 3.39776 32.2202 3.89512 29.6931C3.01344 28.8809 2.19958 28.0912 1.3405 27.3466C0.458821 26.5794 -0.0611452 25.6318 0.0518909 24.639C0.119713 24.0975 0.277963 23.5108 0.54925 23.0596C1.38572 21.7283 2.15436 20.3294 2.96822 18.9756C3.62383 17.8926 4.18901 16.7644 4.91244 15.704C5.29676 15.1625 5.52284 14.5307 5.90716 13.9666C6.6532 12.9061 8.14527 12.3872 9.36606 12.7482C10.4512 13.0641 11.4685 13.5379 12.5763 13.741C12.6893 13.7635 12.7798 13.9215 12.8928 14.0343C16.8038 10.4016 21.2575 7.80686 26.3667 6.29513C26.5702 5.68592 26.6154 5.03159 26.864 4.39982C27.0449 3.92599 26.9997 3.33935 27.0901 2.8204C27.3388 1.46661 28.1753 0.676895 29.3734 0.270758C29.803 0.135379 30.2325 0 30.7525 0C33.9175 0.0451264 37.0825 0.0451264 40.2475 0C41.1518 0 41.9204 0.361011 42.6439 0.767148C43.2995 1.1056 43.6612 1.82762 43.8421 2.50451C44.1586 3.74549 44.3394 5.00903 44.5881 6.31769C49.6747 7.76173 54.1283 10.3565 58.0168 14.0117C59.2376 13.583 60.481 13.1543 61.747 12.7482C62.3348 12.5677 62.9226 12.6354 63.5329 12.861C64.6181 13.2671 65.2737 14.0569 65.7485 15.0271C66.4041 16.3132 67.2405 17.4865 67.8961 18.7726C68.4839 19.9684 69.343 21.0063 69.8404 22.2473C70.089 22.8565 70.7446 23.2626 70.7446 24.0298C71.3324 24.9774 70.7673 25.8123 70.4281 26.6471C70.3377 26.8727 70.2247 27.1661 70.0212 27.2563C69.2074 27.6173 68.8004 28.4296 68.1222 28.926C67.8057 29.1516 67.4666 29.3998 67.1049 29.6706C67.6248 32.2653 68.077 34.8601 68.077 37.5226C68.077 40.1625 67.6701 42.7121 67.1049 45.2392C67.9866 46.0514 68.8004 46.8412 69.6595 47.5857C70.5412 48.3529 71.0611 49.3005 70.9481 50.2933C70.8803 50.8348 70.7447 51.4215 70.4508 51.8727C69.6369 53.1814 68.8682 54.5352 68.077 55.8664C67.0823 57.5135 66.2684 59.296 65.1155 60.8529C64.912 61.7103 64.0981 61.778 63.5103 62.0939C62.8773 62.4323 62.2443 62.3421 61.5435 62.139C60.5036 61.8457 59.5089 61.3267 58.4237 61.1913C58.3107 61.1688 58.2203 61.0108 58.1072 60.898C54.1962 64.5758 49.7652 67.1931 44.5881 68.6597C44.3394 69.8782 44.1133 71.1417 43.8421 72.3827C43.5708 73.6011 42.7569 74.3682 41.604 74.7292C41.1744 74.8646 40.7223 75 40.2249 75C37.0599 74.9549 33.8949 74.9549 30.7299 75C29.8256 75 29.0569 74.639 28.3335 74.2329C27.6779 73.8944 27.2936 73.1724 27.1579 72.4955C26.9093 71.1643 26.6606 69.9233 26.3893 68.6146Z"
                                 fill="black" />
                         </svg>
                         <span>REST-API</span>
@@ -329,10 +324,6 @@
                             <path
                                 d="M65.125 62.75V12.25C71.25 18.875 75 27.75 75 37.5C75 47.25 71.25 56.125 65.125 62.75Z"
                                 fill="black" />
-                            <path d="M13.875 17.75L35.5 61.125H13.875V17.75Z" fill="black" />
-                            <path d="M37.5 56.25L16.25 13.875H58.75L37.5 56.25Z" fill="black" />
-                            <path d="M39.5 61.125L61.125 17.75V61.125H39.5Z" fill="black" />
-                            <path d="M16.25 13.875H58.75L37.5 56.25L16.25 13.875Z" fill="black" />
                         </svg>
                         <span>Material Design</span>
                     </div>
@@ -340,9 +331,6 @@
                         <svg width="80" height="75" viewBox="0 0 80 75" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M78.3013 19.7049L71.2114 29.6354L64.1215 19.7049H67.9871C67.6924 12.3264 61.6079 6.42361 54.1713 6.42361C47.8961 6.42361 42.5743 10.6424 40.8929 16.3889C38.8474 15.7292 36.7325 15.3125 34.583 15.1215C34.8257 14.2014 35.1377 13.2812 35.5191 12.3958C36.5418 9.98264 37.998 7.8125 39.8528 5.95486C41.7076 4.09722 43.8744 2.62153 46.284 1.61458C48.7802 0.538194 51.4324 0 54.1713 0C56.9102 0 59.5624 0.538194 62.0586 1.59722C64.4682 2.62153 66.635 4.07986 68.4898 5.9375C70.3447 7.79514 71.8008 9.96528 72.8235 12.3785C73.8116 14.7049 74.349 17.1701 74.401 19.7049H78.3013Z"
-                                fill="black" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M68.3859 74.9999V70.729H43.9438C44.1172 70.6422 44.2905 70.5728 44.4639 70.486C47.1161 69.2186 49.5603 67.5693 51.7445 65.5554C52.0392 65.2776 52.3165 65.0172 52.5766 64.7568C52.8713 64.4617 53.1833 64.1492 53.478 63.8193C53.8247 63.4374 54.1714 63.0381 54.4834 62.6387H68.3859V58.3679L80.0002 66.6839L68.3859 74.9999Z"
                                 fill="black" />
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M59.3716 44.1493C59.3716 47.8473 58.6435 51.441 57.2221 54.8264C56.0087 57.7084 54.3099 60.3473 52.195 62.6563C51.9177 62.9514 51.6403 63.2466 51.3629 63.5417C51.1029 63.8021 50.8429 64.0452 50.5829 64.3056C48.5374 66.198 46.2492 67.7431 43.753 68.941C43.4063 69.1146 43.0422 69.2709 42.6782 69.4271C42.6609 69.4271 42.6609 69.4445 42.6435 69.4445C40.5634 70.3299 38.3272 70.7639 36.0563 70.7639H0V62.691H33.4735C43.597 62.691 51.9003 54.5834 52.039 44.4445C52.039 44.3577 52.039 44.2709 52.039 44.1841C52.039 33.1077 43.0596 24.1146 32 24.1146C20.9404 24.0799 11.961 33.0556 11.961 44.1493H16.6067L8.30336 55.7813L0 44.1493H4.64572C4.64572 40.4514 5.37378 36.8577 6.79523 33.4723C8.18201 30.2084 10.1408 27.2743 12.6544 24.757C15.1679 22.2396 18.0975 20.2605 21.3564 18.8889C24.7367 17.4653 28.325 16.7361 32.0173 16.7361C32.7627 16.7361 33.4908 16.7709 34.2188 16.823C36.3684 16.9966 38.4659 17.4132 40.5114 18.0903C41.2394 18.3334 41.9502 18.5938 42.6609 18.9063C45.9198 20.2952 48.8494 22.257 51.3629 24.7743C53.8765 27.2917 55.8526 30.2257 57.2221 33.4896C58.6435 36.8577 59.3716 40.4514 59.3716 44.1493Z"
@@ -353,33 +341,32 @@
                 </div>
                 <div class="skills-footer">
                     <div class="skill-item" aria-hidden="true">
-                        <svg width="100" height="75" viewBox="0 0 100 75" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_105207_2189)">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_105207_2281)">
                                 <path
-                                    d="M74.7862 31.5181L50.7694 45.1983C50.3371 45.4526 49.8031 45.4526 49.3582 45.1983L25.3414 31.5181C24.4005 30.9841 24.4005 29.6237 25.3414 29.077L49.3582 15.3967C49.7904 15.1424 50.3244 15.1424 50.7694 15.3967L74.7862 29.077C75.727 29.6109 75.727 30.9713 74.7862 31.5181Z"
+                                    d="M49.8284 25.2145L30.6149 36.1587C30.2691 36.3621 29.8419 36.3621 29.4859 36.1587L10.2725 25.2145C9.51984 24.7873 9.51984 23.699 10.2725 23.2616L29.4859 12.3174C29.8318 12.1139 30.2589 12.1139 30.6149 12.3174L49.8284 23.2616C50.581 23.6888 50.581 24.7771 49.8284 25.2145Z"
                                     fill="black" />
                                 <path
-                                    d="M70.6289 36.1205V47.3978C70.6289 47.9064 70.3619 48.3641 69.9169 48.6184L50.7696 59.527C50.3373 59.7813 49.8033 59.7813 49.3583 59.527L30.211 48.6184C29.766 48.3641 29.499 47.9064 29.499 47.3978V36.1205L40.1152 42.1597L49.3583 47.436C49.7906 47.6903 50.3246 47.6903 50.7696 47.436L60.0127 42.1597L70.6289 36.1205Z"
+                                    d="M46.5025 28.8964V37.9183C46.5025 38.3251 46.2889 38.6913 45.9329 38.8947L30.6151 47.6216C30.2693 47.8251 29.8421 47.8251 29.4861 47.6216L14.1682 38.8947C13.8122 38.6913 13.5986 38.3251 13.5986 37.9183V28.8964L22.0916 33.7278L29.4861 37.9488C29.8319 38.1522 30.2591 38.1522 30.6151 37.9488L38.0096 33.7278L46.5025 28.8964Z"
                                     fill="black" />
                                 <path
-                                    d="M81.817 17.5072L82.4781 17.0495C83.2791 16.4901 83.1774 15.2823 82.3001 14.8627L77.0365 12.358C76.1465 11.9385 75.1421 12.6377 75.2184 13.6167L75.727 19.427C75.816 20.3933 76.9221 20.9146 77.7231 20.3552L78.6639 19.7067C87.0297 33.1836 84.7794 51.1358 73.0825 62.0699C61.5763 72.8259 43.8402 74.1355 30.9101 65.1848C30.0455 64.5872 28.8504 64.8034 28.2528 65.6679C27.6553 66.5325 27.8714 67.7276 28.736 68.3252C35.1311 72.7496 42.5688 74.9237 49.9938 74.9237C59.2878 74.9237 68.5563 71.5164 75.6888 64.8542C88.7461 52.6361 91.2635 32.5352 81.817 17.5072Z"
+                                    d="M55.4536 14.0058L55.9825 13.6396C56.6233 13.1921 56.5419 12.2258 55.8401 11.8901L51.6292 9.88642C50.9172 9.55077 50.1137 10.1102 50.1747 10.8934L50.5816 15.5416C50.6528 16.3146 51.5377 16.7316 52.1785 16.2841L52.9311 15.7654C59.6238 26.5469 57.8235 40.9086 48.466 49.6559C39.261 58.2607 25.0722 59.3084 14.7281 52.1478C14.0364 51.6698 13.0803 51.8427 12.6023 52.5343C12.1242 53.226 12.2971 54.1821 12.9888 54.6601C18.1049 58.1997 24.0551 59.939 29.9951 59.939C37.4302 59.939 44.845 57.2131 50.5511 51.8834C60.9969 42.1088 63.0108 26.0281 55.4536 14.0058Z"
                                     fill="black" />
                                 <path
-                                    d="M71.3909 6.59834C56.9986 -3.36945 37.2537 -1.90734 24.438 10.0693C11.0501 22.5926 8.64717 42.6044 18.6277 57.8867L17.6995 58.5224C16.8986 59.0818 17.0003 60.2896 17.8775 60.7092L23.1411 63.2139C24.0311 63.6334 25.0355 62.9342 24.9593 61.9552L24.4507 56.1449C24.3617 55.1786 23.2556 54.6573 22.4546 55.2167L21.768 55.6999C12.8936 41.9815 15.0423 24.0674 27.0444 12.8536C38.5505 2.09758 56.2866 0.775319 69.2168 9.7387C70.0813 10.3363 71.2764 10.1201 71.874 9.25557C72.4715 8.39102 72.2554 7.1959 71.3909 6.59834Z"
+                                    d="M47.1127 5.27884C35.5989 -2.69539 19.803 -1.5257 9.55038 8.05558C-1.15991 18.0742 -3.08227 34.0837 4.90214 46.3095L4.15964 46.8181C3.51885 47.2656 3.60022 48.2319 4.30204 48.5675L8.51292 50.5713C9.2249 50.9069 10.0284 50.3475 9.9674 49.5643L9.56055 44.9161C9.48936 44.1431 8.60446 43.726 7.96367 44.1736L7.41443 44.5601C0.314919 33.5853 2.03385 19.2541 11.6355 10.2831C20.8404 1.67823 35.0293 0.620426 45.3734 7.79113C46.065 8.26918 47.0211 8.09627 47.4992 7.40463C47.9772 6.71299 47.8043 5.75689 47.1127 5.27884Z"
                                     fill="black" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_105207_2189">
-                                    <rect width="75" height="74.9237" fill="white" transform="translate(12.5)" />
+                                <clipPath id="clip0_105207_2281">
+                                    <rect width="60" height="59.939" fill="white" />
                                 </clipPath>
                             </defs>
                         </svg>
                     </div>
                     <div class="skills-footer-wrapper">
-                        <p>Don't see the skill you need?</p>
-                        <a href="#contact">Contact me</a>
-                        <p>I'm always ready to learn!</p>
+                        <p data-i18n="skills.missing">Don't see the skill you need?</p>
+                        <a href="#contact" data-i18n="skills.contact">Contact me</a>
+                        <p data-i18n="skills.learning">I'm always ready to learn!</p>
                     </div>
                 </div>
             </div>
@@ -400,8 +387,9 @@
         </div>
         <section id="portfolio" class="section-header" aria-labelledby="portfolio-heading">
             <div class="section-content">
-                <h2 id="portfolio-heading">Portfolio</h2>
-                <p>Explore a selection of my work here – Interact with projects to see my skills in action.</p>
+                <h2 id="portfolio-heading" data-i18n="portfolio.heading">Portfolio</h2>
+                <p data-i18n="portfolio.subtext">Explore a selection of my work here – Interact with projects to see my
+                    skills in action.</p>
             </div>
             <div class="portfolio-projects">
                 <div class="portfolio-left">
@@ -422,7 +410,8 @@
                     <div class="project-info">
                         <h4>Join</h4>
                         <p><strong>HTML | CSS | JavaScript | Scrum | REST-API | Firebase</strong></p>
-                        <p>Task manager inspired by the Kanban System. Create and organise tasks using drag and drop
+                        <p data-i18n="portfolio.join.desc">Task manager inspired by the Kanban System. Create and
+                            organise tasks using drag and drop
                             functions, assign users and categories.</p>
                         <div class="button-wrapper">
                             <a href="https://github.com" target="_blank"
@@ -454,7 +443,8 @@
                     <div class="project-info project-info-right">
                         <h4>El Pollo Loco</h4>
                         <p><strong>HTML | CSS | JavaScript | JS OOP </strong></p>
-                        <p>A jump-and-run game based on object-oriented programming and Canva.</p>
+                        <p data-i18n="portfolio.pollo.desc">A jump-and-run game based on object-oriented programming and
+                            Canva.</p>
                         <div class="button-wrapper">
                             <a href="https://github.com" target="_blank"
                                 rel="noopener noreferrer"><button>Github</button></a>
@@ -485,7 +475,7 @@
                     <div class="project-info">
                         <h4>Pokédex</h4>
                         <p><strong>HTML | CSS | JavaScript | REST API</strong></p>
-                        <p>A Pokédex app fetching data from the PokéAPI.</p>
+                        <p data-i18n="portfolio.pokedex.desc">A Pokédex app fetching data from the PokéAPI.</p>
                         <div class="button-wrapper">
                             <a href="https://github.com" target="_blank"
                                 rel="noopener noreferrer"><button>Github</button></a>
@@ -501,9 +491,9 @@
         </section>
         <section id="references" class="section-header" aria-labelledby="references-heading">
             <div class="section-content">
-                <h2 id="references-heading">References</h2>
-                <p>I thrive both independently and as part of a team. Here's what my colleagues have to say about
-                    working with me.</p>
+                <h2 id="references-heading" data-i18n="ref.heading">References</h2>
+                <p data-i18n="ref.subtext">I thrive both independently and as part of a team. Here's what my colleagues
+                    have to say about working with me.</p>
             </div>
             <div class="references-grid">
                 <article aria-label="Reference from S. Rath">
@@ -514,8 +504,9 @@
                             fill="black" />
                     </svg>
                     <h3>S. Rath</h3>
-                    <p>Team Partner</p>
-                    <blockquote>A strong team player with a great eye for detail and user experience. Communicates
+                    <p data-i18n="ref.role">Team Partner</p>
+                    <blockquote data-i18n="ref.rath">A strong team player with a great eye for detail and user
+                        experience. Communicates
                         clearly, adapts quickly and consistently delivers high-quality results under pressure.
                     </blockquote>
                 </article>
@@ -527,8 +518,9 @@
                             fill="black" />
                     </svg>
                     <h3>R. Celik</h3>
-                    <p>Team Partner</p>
-                    <blockquote>Lars takes ownership, thinks ahead and never loses sight of the bigger picture. His
+                    <p data-i18n="ref.role">Team Partner</p>
+                    <blockquote data-i18n="ref.celik">Lars takes ownership, thinks ahead and never loses sight of the
+                        bigger picture. His
                         structured way of working, reliability and positive mindset make him a valuable part of every
                         team.</blockquote>
                 </article>
@@ -540,8 +532,9 @@
                             fill="black" />
                     </svg>
                     <h3>N. Shirvani</h3>
-                    <p>Team Partner</p>
-                    <blockquote>One of the most reliable and solution-oriented people to work with. Brings structure,
+                    <p data-i18n="ref.role">Team Partner</p>
+                    <blockquote data-i18n="ref.shirvani">One of the most reliable and solution-oriented people to work
+                        with. Brings structure,
                         creativity and a positive mindset into every project while keeping collaboration smooth and
                         efficient.</blockquote>
                 </article>
@@ -555,16 +548,17 @@
         </div>
     </main>
     <footer class="contact-wrapper" id="contact" aria-labelledby="contact-heading">
-        <div class="contact-section ">
-            <h2 id="contact-heading" class="contact-heading">Say Hi!</h2>
+        <div class="contact-section">
+            <h2 id="contact-heading" class="contact-heading" data-i18n="contact.heading">Say Hi!</h2>
             <div class="contact-inner">
-                <h3 class="contact-subtitle">Want to discuss a new project?</h3>
-                <p class="contact-desc">Say hello! Let's discuss your ideas and make it happen.</p>
+                <h3 class="contact-subtitle" data-i18n="contact.subtitle">Want to discuss a new project?</h3>
+                <p class="contact-desc" data-i18n="contact.desc">Say hello! Let's discuss your ideas and make it happen.
+                </p>
                 <form class="contact-form" action="https://formspree.io/f/xpqnqjbv" method="POST" novalidate>
                     <div class="form-group">
                         <label for="contact-name"></label>
                         <input id="contactName" type="text" name="name" placeholder="Your name" required
-                            autocomplete="name" oninput="formValidation(id)" />
+                            autocomplete="name" oninput="formValidation(id)" data-i18n-placeholder="placeholder.name" />
                         <svg class="hidden" width="26" height="26" viewBox="0 0 26 26" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -577,12 +571,13 @@
                                 d="M12.4717 0C5.61225 0 0 5.61225 0 12.4717C0 19.3878 5.61225 25 12.4717 25C19.3878 25 24.9433 19.3878 24.9433 12.4717C25 5.61225 19.3878 0 12.4717 0ZM20.1247 6.46258L11.9615 19.898C11.678 20.3515 11.2245 20.6916 10.6576 20.6916C10.6009 20.6916 10.5442 20.6916 10.4875 20.6916C9.97732 20.6916 9.52381 20.4649 9.18367 20.1247L5.04535 15.3061C4.42177 14.6259 4.47846 13.5488 5.21542 12.9252C5.89569 12.3016 7.02948 12.3583 7.59637 13.0952L10.2608 16.1565L17.1769 4.70522C17.6871 3.91157 18.7075 3.62812 19.5011 4.13832C20.3515 4.59184 20.5782 5.66893 20.1247 6.46258Z"
                                 fill="#70E61C" />
                         </svg>
-                        <span id="requiredName" class="required hiddenBlock">Your Name is required</span>
+                        <span id="requiredName" class="required hiddenBlock" data-i18n="error.name">Your Name is
+                            required</span>
                     </div>
                     <div class="form-group">
                         <label for="contact-email"></label>
                         <input id="contactEmail" type="email" name="email" placeholder="Your email" required
-                            autocomplete="email" oninput="validateMail()" />
+                            autocomplete="email" oninput="validateMail()" data-i18n-placeholder="placeholder.email" />
                         <svg class="hidden" width="26" height="26" viewBox="0 0 26 26" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -595,12 +590,13 @@
                                 d="M12.4717 0C5.61225 0 0 5.61225 0 12.4717C0 19.3878 5.61225 25 12.4717 25C19.3878 25 24.9433 19.3878 24.9433 12.4717C25 5.61225 19.3878 0 12.4717 0ZM20.1247 6.46258L11.9615 19.898C11.678 20.3515 11.2245 20.6916 10.6576 20.6916C10.6009 20.6916 10.5442 20.6916 10.4875 20.6916C9.97732 20.6916 9.52381 20.4649 9.18367 20.1247L5.04535 15.3061C4.42177 14.6259 4.47846 13.5488 5.21542 12.9252C5.89569 12.3016 7.02948 12.3583 7.59637 13.0952L10.2608 16.1565L17.1769 4.70522C17.6871 3.91157 18.7075 3.62812 19.5011 4.13832C20.3515 4.59184 20.5782 5.66893 20.1247 6.46258Z"
                                 fill="#70E61C" />
                         </svg>
-                        <span id="requiredEmail" class="required hiddenBlock">Your email is required</span>
+                        <span id="requiredEmail" class="required hiddenBlock" data-i18n="error.email">Your email is
+                            required</span>
                     </div>
                     <div class="form-group">
                         <label for="contact-message"></label>
-                        <textarea id="contactMessage" name="message" placeholder="Your message " rows="7" required
-                            oninput="formValidation(id)"></textarea>
+                        <textarea id="contactMessage" name="message" placeholder="Your message" rows="7" required
+                            oninput="formValidation(id)" data-i18n-placeholder="placeholder.message"></textarea>
                         <svg class="hidden" width="26" height="26" viewBox="0 0 26 26" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -613,73 +609,82 @@
                                 d="M12.4717 0C5.61225 0 0 5.61225 0 12.4717C0 19.3878 5.61225 25 12.4717 25C19.3878 25 24.9433 19.3878 24.9433 12.4717C25 5.61225 19.3878 0 12.4717 0ZM20.1247 6.46258L11.9615 19.898C11.678 20.3515 11.2245 20.6916 10.6576 20.6916C10.6009 20.6916 10.5442 20.6916 10.4875 20.6916C9.97732 20.6916 9.52381 20.4649 9.18367 20.1247L5.04535 15.3061C4.42177 14.6259 4.47846 13.5488 5.21542 12.9252C5.89569 12.3016 7.02948 12.3583 7.59637 13.0952L10.2608 16.1565L17.1769 4.70522C17.6871 3.91157 18.7075 3.62812 19.5011 4.13832C20.3515 4.59184 20.5782 5.66893 20.1247 6.46258Z"
                                 fill="#70E61C" />
                         </svg>
-                        <span id="requiredMessage" class="required hiddenBlock">your message is empty</span>
+                        <span id="requiredMessage" class="required hiddenBlock" data-i18n="error.message">your message
+                            is empty</span>
                     </div>
                     <div class="form-group">
                         <label class="checkbox-label">
                             <input id="checkbox" type="checkbox" onchange="approvalPolicy()" required />
-                            <p>I've read the <a href="/privacy" class="policy-link">privacy policy</a>
-                            and agree to the
-                                processing of my data as outlined.</p>
+                            <p data-i18n="contact.policy">I've read the <a href="/privacy" class="policy-link">privacy
+                                    policy</a>
+                                and agree to the processing of my data as outlined.</p>
                         </label>
-                        <span id="errorSpan" class="required hiddenBlock">Please accept the privacy policy.</span>
+                        <span id="errorSpan" class="required hiddenBlock" data-i18n="error.policy">Please accept the
+                            privacy policy.</span>
                     </div>
-                    <button type="submit" disabled="" style="cursor: not-allowed;"">Send
-                        message</button>
                 </form>
+                <div class="form-footer-wrapper">
+                    <button type="submit" disabled="" style="cursor: not-allowed;" data-i18n="contact.submit"
+                        onclick="handleSubmit()">Send message</button>
+                    <a href="#site-main"><svg width="54" height="77" viewBox="0 0 54 77" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M44.8525 38.1265L26.9263 24.0002L9.00011 38.1265" stroke="#FFFCF3"
+                                stroke-width="4" />
+                            <path d="M26.9268 76.0439L26.9268 24" stroke="#FFFCF3" stroke-width="4" />
+                        </svg></a>
+                </div>
             </div>
-            <div class=" contact-footer">
-                        <div class="footer-left">
-                            <svg id="Ebene_1" style="width: 75px; fill: #FFFCF3;" aria-label="LS Logo" role="img"
-                                data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110.5 56.03">
-                                <path
-                                    d="M0,.09l16.95.2v6.58s-8.01-.09-8.01-.09v42.49s8.01.09,8.01.09v6.58S0,55.74,0,55.74V.09Z" />
-                                <path
-                                    d="M110.5,56.03l-16.7-.2v-6.6s7.89.09,7.89.09V6.7s-7.89-.09-7.89-.09V0s16.7.2,16.7.2v55.84Z" />
-                                <g>
-                                    <polygon
-                                        points="50.05 35.55 33.37 35.33 33.26 .56 22.54 .41 22.67 42.52 48.14 42.86 50.05 35.55" />
-                                    <path
-                                        d="M86.52,36.27c-1.11-1.59-2.51-2.93-4.19-4.03-1.68-1.09-3.5-2.03-5.46-2.82-1.96-.78-3.78-1.54-5.46-2.28-1.68-.74-3.07-1.53-4.18-2.39-1.11-.85-1.67-1.91-1.67-3.17,0-1.34.59-2.41,1.8-3.19,1.2-.78,2.93-1.16,5.2-1.13,2.41.03,4.65.3,6.73.81,2.08.51,3.64,1.07,4.68,1.67l3.02-7.21c-1.65-.86-3.76-1.53-6.31-2.01-2.55-.48-5.27-.73-8.14-.77-2.5-.03-4.77.19-6.79.67-2.03.48-3.78,1.23-5.27,2.26-.24.17-.47.35-.7.53l-2.51,14.61c.09.15.18.3.28.45,1.11,1.61,2.51,2.96,4.19,4.06,1.68,1.09,3.5,2.02,5.46,2.78,1.96.76,3.78,1.5,5.46,2.22,1.68.72,3.07,1.5,4.18,2.36,1.11.86,1.67,1.96,1.67,3.3,0,1.76-.76,3.07-2.29,3.91-1.53.84-3.74,1.24-6.61,1.2-1.23-.02-2.42-.12-3.58-.3-1.16-.18-2.26-.41-3.29-.67-1.04-.27-1.97-.55-2.8-.86-.83-.3-1.5-.59-2.02-.85l-3.09,7.33c1.28.61,3.26,1.22,5.95,1.84,2.69.62,5.81.96,9.35,1.01,2.69.04,5.15-.2,7.39-.72,2.24-.52,4.15-1.33,5.73-2.44,1.58-1.11,2.8-2.51,3.67-4.2.87-1.69,1.3-3.71,1.29-6.06s-.57-4.32-1.68-5.92Z" />
-                                </g>
-                            </svg>
-                            <span class="footer-copy">© Lars Schönemann 2026</span>
-                        </div>
-                        <div class="footer-right">
-                            <a href="https://github.com/LarsSchoenemannDev" target="_blank" rel="noopener noreferrer"
-                                aria-label="GitHub profile">
-                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M20 10.7407C11.7125 10.7407 5 17.4532 5 25.7407C4.9983 28.8896 5.98822 31.9591 7.82933 34.5137C9.67043 37.0683 12.2692 38.9783 15.257 39.9727C16.007 40.1032 16.2875 39.6532 16.2875 39.2587C16.2875 38.9032 16.268 37.7227 16.268 36.4657C12.5 37.1602 11.525 35.5477 11.225 34.7032C11.0555 34.2712 10.325 32.9407 9.6875 32.5837C9.1625 32.3032 8.4125 31.6087 9.668 31.5907C10.85 31.5712 11.693 32.6782 11.975 33.1282C13.325 35.3962 15.482 34.7587 16.343 34.3657C16.475 33.3907 16.868 32.7352 17.3 32.3602C13.9625 31.9852 10.475 30.6907 10.475 24.9532C10.475 23.3212 11.0555 21.9727 12.0125 20.9212C11.8625 20.5462 11.3375 19.0087 12.1625 16.9462C12.1625 16.9462 13.418 16.5532 16.2875 18.4852C17.5086 18.1463 18.7703 17.9757 20.0375 17.9782C21.3125 17.9782 22.5875 18.1462 23.7875 18.4837C26.6555 16.5337 27.9125 16.9477 27.9125 16.9477C28.7375 19.0102 28.2125 20.5477 28.0625 20.9227C29.018 21.9727 29.6 23.3032 29.6 24.9532C29.6 30.7102 26.0945 31.9852 22.757 32.3602C23.3 32.8282 23.7695 33.7282 23.7695 35.1352C23.7695 37.1407 23.75 38.7532 23.75 39.2602C23.75 39.6532 24.032 40.1212 24.782 39.9712C27.7595 38.9659 30.3469 37.0522 32.1799 34.4994C34.0128 31.9467 34.9991 28.8834 35 25.7407C35 17.4532 28.2875 10.7407 20 10.7407Z"
-                                        fill="#FFFCF3" />
-                                </svg>
-                            </a>
-                            <a href="mailto:schoenemann.lars@t-online.de" aria-label="Send email to Lars Schönemann">
-                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M6.5 13H33.5C33.8978 13 35 13 35 13C35 13 35 14.1022 35 14.5V38.5C35 38.8978 35 40 35 40C35 40 33.8978 40 33.5 40H6.5C6.10218 40 5 40 5 40C5 40 5 38.8978 5 38.5V14.5C5 14.1022 5 13 5 13C5 13 6.10218 13 6.5 13ZM32 19.357L20.108 30.007L8 19.324V37H32V19.357ZM8.7665 16L20.0915 25.993L31.253 16H8.7665Z"
-                                        fill="#FFFCF3" />
-                                </svg>
-                            </a>
-                            <a href="https://www.linkedin.com/in/lars-sch%C3%B6nemann-7626a9374/" target="_blank"
-                                rel="noopener noreferrer" aria-label="LinkedIn profile">
-                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M30.5583 35.565H26.1167V28.6033C26.1167 26.9433 26.0833 24.8067 23.8 24.8067C21.485 24.8067 21.1317 26.6133 21.1317 28.4817V35.565H16.6883V21.25H20.955V23.2H21.0133C21.61 22.0767 23.06 20.8883 25.2267 20.8883C29.7267 20.8883 30.56 23.8517 30.56 27.7067V35.565H30.5583ZM11.6717 19.2917C10.3523 19.2917 9.28333 18.2217 9.28333 16.9017C9.28333 15.5817 10.3523 14.5117 11.6717 14.5117C12.991 14.5117 14.06 15.5817 14.06 16.9017C14.06 18.2217 12.991 19.2917 11.6717 19.2917ZM13.8983 35.565H9.44333V21.25H13.9V35.565H13.8983ZM32.7833 10H7.21667C5.99 10 5 10.9667 5 12.1617V37.8383C5 39.0333 5.99 40 7.21667 40H32.7833C34.01 40 35 39.0333 35 37.8383V12.1617C35 10.9667 34.01 10 32.7833 10Z"
-                                        fill="#FFFCF3" />
-                                </svg>
-                            </a>
-                        </div>
+            <div class="contact-footer">
+                <div class="footer-left">
+                    <svg id="Ebene_1" style="width: 75px; fill: #FFFCF3;" aria-label="LS Logo" role="img"
+                        data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110.5 56.03">
+                        <path
+                            d="M0,.09l16.95.2v6.58s-8.01-.09-8.01-.09v42.49s8.01.09,8.01.09v6.58S0,55.74,0,55.74V.09Z" />
+                        <path
+                            d="M110.5,56.03l-16.7-.2v-6.6s7.89.09,7.89.09V6.7s-7.89-.09-7.89-.09V0s16.7.2,16.7.2v55.84Z" />
+                        <g>
+                            <polygon
+                                points="50.05 35.55 33.37 35.33 33.26 .56 22.54 .41 22.67 42.52 48.14 42.86 50.05 35.55" />
+                            <path
+                                d="M86.52,36.27c-1.11-1.59-2.51-2.93-4.19-4.03-1.68-1.09-3.5-2.03-5.46-2.82-1.96-.78-3.78-1.54-5.46-2.28-1.68-.74-3.07-1.53-4.18-2.39-1.11-.85-1.67-1.91-1.67-3.17,0-1.34.59-2.41,1.8-3.19,1.2-.78,2.93-1.16,5.2-1.13,2.41.03,4.65.3,6.73.81,2.08.51,3.64,1.07,4.68,1.67l3.02-7.21c-1.65-.86-3.76-1.53-6.31-2.01-2.55-.48-5.27-.73-8.14-.77-2.5-.03-4.77.19-6.79.67-2.03.48-3.78,1.23-5.27,2.26-.24.17-.47.35-.7.53l-2.51,14.61c.09.15.18.3.28.45,1.11,1.61,2.51,2.96,4.19,4.06,1.68,1.09,3.5,2.02,5.46,2.78,1.96.76,3.78,1.5,5.46,2.22,1.68.72,3.07,1.5,4.18,2.36,1.11.86,1.67,1.96,1.67,3.3,0,1.76-.76,3.07-2.29,3.91-1.53.84-3.74,1.24-6.61,1.2-1.23-.02-2.42-.12-3.58-.3-1.16-.18-2.26-.41-3.29-.67-1.04-.27-1.97-.55-2.8-.86-.83-.3-1.5-.59-2.02-.85l-3.09,7.33c1.28.61,3.26,1.22,5.95,1.84,2.69.62,5.81.96,9.35,1.01,2.69.04,5.15-.2,7.39-.72,2.24-.52,4.15-1.33,5.73-2.44,1.58-1.11,2.8-2.51,3.67-4.2.87-1.69,1.3-3.71,1.29-6.06s-.57-4.32-1.68-5.92Z" />
+                        </g>
+                    </svg>
+                    <span class="footer-copy">© Lars Schönemann 2026</span>
+                </div>
+                <div class="footer-right">
+                    <a href="https://github.com/LarsSchoenemannDev" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub profile">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20 10.7407C11.7125 10.7407 5 17.4532 5 25.7407C4.9983 28.8896 5.98822 31.9591 7.82933 34.5137C9.67043 37.0683 12.2692 38.9783 15.257 39.9727C16.007 40.1032 16.2875 39.6532 16.2875 39.2587C16.2875 38.9032 16.268 37.7227 16.268 36.4657C12.5 37.1602 11.525 35.5477 11.225 34.7032C11.0555 34.2712 10.325 32.9407 9.6875 32.5837C9.1625 32.3032 8.4125 31.6087 9.668 31.5907C10.85 31.5712 11.693 32.6782 11.975 33.1282C13.325 35.3962 15.482 34.7587 16.343 34.3657C16.475 33.3907 16.868 32.7352 17.3 32.3602C13.9625 31.9852 10.475 30.6907 10.475 24.9532C10.475 23.3212 11.0555 21.9727 12.0125 20.9212C11.8625 20.5462 11.3375 19.0087 12.1625 16.9462C12.1625 16.9462 13.418 16.5532 16.2875 18.4852C17.5086 18.1463 18.7703 17.9757 20.0375 17.9782C21.3125 17.9782 22.5875 18.1462 23.7875 18.4837C26.6555 16.5337 27.9125 16.9477 27.9125 16.9477C28.7375 19.0102 28.2125 20.5477 28.0625 20.9227C29.018 21.9727 29.6 23.3032 29.6 24.9532C29.6 30.7102 26.0945 31.9852 22.757 32.3602C23.3 32.8282 23.7695 33.7282 23.7695 35.1352C23.7695 37.1407 23.75 38.7532 23.75 39.2602C23.75 39.6532 24.032 40.1212 24.782 39.9712C27.7595 38.9659 30.3469 37.0522 32.1799 34.4994C34.0128 31.9467 34.9991 28.8834 35 25.7407C35 17.4532 28.2875 10.7407 20 10.7407Z"
+                                fill="#FFFCF3" />
+                        </svg>
+                    </a>
+                    <a href="mailto:schoenemann.lars@t-online.de" aria-label="Send email to Lars Schönemann">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.5 13H33.5C33.8978 13 35 13 35 13C35 13 35 14.1022 35 14.5V38.5C35 38.8978 35 40 35 40C35 40 33.8978 40 33.5 40H6.5C6.10218 40 5 40 5 40C5 40 5 38.8978 5 38.5V14.5C5 14.1022 5 13 5 13C5 13 6.10218 13 6.5 13ZM32 19.357L20.108 30.007L8 19.324V37H32V19.357ZM8.7665 16L20.0915 25.993L31.253 16H8.7665Z"
+                                fill="#FFFCF3" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/lars-sch%C3%B6nemann-7626a9374/" target="_blank"
+                        rel="noopener noreferrer" aria-label="LinkedIn profile">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M30.5583 35.565H26.1167V28.6033C26.1167 26.9433 26.0833 24.8067 23.8 24.8067C21.485 24.8067 21.1317 26.6133 21.1317 28.4817V35.565H16.6883V21.25H20.955V23.2H21.0133C21.61 22.0767 23.06 20.8883 25.2267 20.8883C29.7267 20.8883 30.56 23.8517 30.56 27.7067V35.565H30.5583ZM11.6717 19.2917C10.3523 19.2917 9.28333 18.2217 9.28333 16.9017C9.28333 15.5817 10.3523 14.5117 11.6717 14.5117C12.991 14.5117 14.06 15.5817 14.06 16.9017C14.06 18.2217 12.991 19.2917 11.6717 19.2917ZM13.8983 35.565H9.44333V21.25H13.9V35.565H13.8983ZM32.7833 10H7.21667C5.99 10 5 10.9667 5 12.1617V37.8383C5 39.0333 5.99 40 7.21667 40H32.7833C34.01 40 35 39.0333 35 37.8383V12.1617C35 10.9667 34.01 10 32.7833 10Z"
+                                fill="#FFFCF3" />
+                        </svg>
+                    </a>
+                </div>
             </div>
             <div class="footer-wrapper-legal">
-                <span class="footer-legal"><a href="/legal">Legal notice</a></span>                
+                <span class="footer-legal"><a href="legalNotes-Rechtshinweise.html" data-i18n="footer.legal">Legal
+                        notice</a></span>
             </div>
         </div>
     </footer>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/i18n.js"></script>
 </body>
 
 </html>

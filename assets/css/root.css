@@ -11,9 +11,7 @@ html {
     box-sizing: border-box;
 }
 
-/* *{
-    outline: 1px solid red;    
-} */
+
 :root {
     --color-primary: #000000;
     --color-secondary: #00BC8F;
@@ -41,23 +39,29 @@ body {
     font-size: var(--fs-normal);
     color: var(--color-primary);
     background-color: var(--color-bg);
-    display: grid;
-    gap: 5px;
+    gap: 200px;
 }
 
 header {
-    padding: 64px clamp(32px, calc(50% - 720px), 100%) 64px;  
+    padding: 64px clamp(32px, calc(50% - 720px), 100%) 64px;
 }
 
-main { 
-    padding: 64px clamp(32px, calc(50% - 720px), 100%) 64px;  
+main {
+    padding: 64px clamp(32px, calc(50% - 720px), 100%) 64px;
 }
 
-section{
+/* * {
+    outline: 1px solid red;
+} */
+
+/* section,footer{
     min-height: 100dvh;
+    gap: 200px;
+   
     border: 2px solid greenyellow;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-}
 
+} */
+
+/* html, body {
+  overflow-x: hidden;
+} */
