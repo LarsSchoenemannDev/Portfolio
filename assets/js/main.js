@@ -217,8 +217,12 @@ function handleSubmit() {
     if (allValid) {
         button.disabled = false;
         button.style.cursor = "pointer";
+        console.log("you can");
+        
     } else {
         button.disabled = true;
         button.style.cursor = "not-allowed";
+        console.log("not jet");
+        
     }
 }

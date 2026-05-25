@@ -56,3 +56,7 @@
         .legal-back:hover {
             text-decoration: underline;
         }
+
+        .footer-legal{
+            display: none;
+        }
