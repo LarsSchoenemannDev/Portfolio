@@ -63,7 +63,6 @@ function toggleMenu() {
     const overlay = document.getElementById("navOverlay");
     const btn = document.getElementById("burgerBtn");
     const isOpen = overlay.classList.contains("is-open");
-
     if (isOpen) {
         overlay.classList.remove("is-open");
         btn.setAttribute("aria-expanded", "false");
@@ -90,7 +89,6 @@ function toggleMenu() {
 function playSvgAnimation(showGroup, hideGroup) {
     const framesToShow = document.querySelectorAll(showGroup);
     const framesToHide = document.querySelectorAll(hideGroup);
-
     framesToHide.forEach(svg => svg.classList.add("hidden"));
     framesToShow.forEach((svg, index) => {
         setTimeout(() => {
@@ -162,13 +160,10 @@ function formValidation(inputId) {
  */
 function validateMail() {
     let mail = document.getElementById("contactEmail");
-
     let errorIcon = mail.nextElementSibling;
     let successIcon = errorIcon.nextElementSibling;
     let requiredText = successIcon.nextElementSibling;
-
     let mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
     if (mailRegex.test(mail.value)) {
         successIcon.classList.remove("hidden");
         errorIcon.classList.add("hidden");
@@ -192,7 +187,6 @@ function validateMail() {
 function approvalPolicy() {
     let button = document.getElementById("checkbox");
     let errorSpan = document.getElementById("errorSpan");
-
     if (button.checked) {
         valid.policy = true;
         errorSpan.classList.add("hiddenBlock");
@@ -204,25 +198,30 @@ function approvalPolicy() {
 }
 
 /**
- * Evaluates the overall form validation state. Enables the submit button
- * and sets its cursor to `pointer` only when all tracked fields are valid.
- * Otherwise, disables the button and sets cursor to `not-allowed`.
+ * Checks all validation states and returns invalid fields.
  *
- * @returns {void}
+ * @returns {Array} invalid field names
  */
 function handleSubmit() {
-    let button = document.querySelector('button[type="submit"]');
-    let allValid = Object.values(valid).every(e => e === true);
+    const button = document.querySelector('button[type="submit"]');
+
+    // Alle Felder sammeln die false sind
+    const invalidFields = Object.entries(valid)
+        .filter(([key, value]) => value === false)
+        .map(([key]) => key);
+
+    const allValid = invalidFields.length === 0;
 
     if (allValid) {
         button.disabled = false;
         button.style.cursor = "pointer";
         console.log("you can");
-        
     } else {
         button.disabled = true;
         button.style.cursor = "not-allowed";
-        console.log("not jet");
-        
+        console.log("not yet");
+
+        console.log("Missing:", invalidFields);
     }
+    return invalidFields;
 }
