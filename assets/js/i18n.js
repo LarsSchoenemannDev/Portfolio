@@ -11,7 +11,7 @@ const translations = {
 
     // About Me
     "about.heading":  "About me",
-    "about.text":     "At some point I started taking websites apart just to understand how they work. Today I build them myself – with HTML, CSS and JavaScript. Since then I've been constantly improving and always looking for the cleanest solution.",
+    "about.text":     "At some point I started taking websites apart just to understand how they work. Today I build them myself with HTML, CSS and JavaScript. Since then I've been constantly improving and always looking for the cleanest solution.",
     "about.location": "Based in Rinteln",
     "about.remote":   "Open to work Remote",
     "about.cta":      "Let's talk",
@@ -24,7 +24,7 @@ const translations = {
 
     // Portfolio
     "portfolio.heading":     "Portfolio",
-    "portfolio.subtext":     "Explore a selection of my work here – Interact with projects to see my skills in action.",
+    "portfolio.subtext":     "Explore a selection of my work here Interact with projects to see my skills in action.",
     "portfolio.join.desc":   "Task manager inspired by the Kanban System. Create and organise tasks using drag and drop functions, assign users and categories.",
     "portfolio.pollo.desc":  "A jump-and-run game based on object-oriented programming and Canva.",
     "portfolio.pokedex.desc":"A Pokédex app fetching data from the PokéAPI.",
@@ -59,7 +59,8 @@ const translations = {
     "footer.legal":  "Legal notice",
   },
 
-  de: {
+  de: {    
+
     // Navigation
     "nav.about":     "Über mich",
     "nav.skills":    "Meine Skills",
@@ -71,7 +72,7 @@ const translations = {
 
     // About Me
     "about.heading":  "Über mich",
-    "about.text":     "Irgendwann fing ich an, Webseiten auseinanderzunehmen – einfach um zu verstehen, wie sie funktionieren. Heute baue ich sie selbst – mit HTML, CSS und JavaScript. Seitdem lerne ich ständig dazu und suche immer nach der saubersten Lösung.",
+    "about.text":     "Irgendwann fing ich an, Webseiten auseinanderzunehmen einfach um zu verstehen, wie sie funktionieren. Heute baue ich sie selbst – mit HTML, CSS und JavaScript. Seitdem lerne ich ständig dazu und suche immer nach der saubersten Lösung.",
     "about.location": "Wohnhaft in Rinteln",
     "about.remote":   "Offen für Remote-Arbeit",
     "about.cta":      "Kontakt aufnehmen",
@@ -84,7 +85,7 @@ const translations = {
 
     // Portfolio
     "portfolio.heading":     "Portfolio",
-    "portfolio.subtext":     "Hier findest du eine Auswahl meiner Projekte – interagiere mit ihnen und sieh meine Skills in Aktion.",
+    "portfolio.subtext":     "Hier findest du eine Auswahl meiner Projekte interagiere mit ihnen und sieh meine Skills in Aktion.",
     "portfolio.join.desc":   "Task-Manager inspiriert vom Kanban-System. Aufgaben erstellen und per Drag & Drop organisieren, Nutzer und Kategorien zuweisen.",
     "portfolio.pollo.desc":  "Ein Jump-and-Run-Spiel auf Basis von objektorientierter Programmierung und Canvas.",
     "portfolio.pokedex.desc":"Eine Pokédex-App, die Daten von der PokéAPI abruft.",

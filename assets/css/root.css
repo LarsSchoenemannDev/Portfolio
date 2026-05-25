@@ -1,6 +1,5 @@
 html {
     scroll-behavior: smooth;
-    /* scroll-snap-type: y mandatory; */
 }
 
 *,
@@ -8,18 +7,14 @@ html {
 ::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;    
 }
-
 
 :root {
     --color-primary: #000000;
     --color-secondary: #00BC8F;
-    --color-thred: #4B47FF;
-    --color-four: #FF9900;
     --color-bg: #FFFCF3;
     --color-btn-none: #BBBBBB;
-
     --fs-normal: clamp(1rem, 1vw, 1rem);
     --fs-18: clamp(1rem, 1.1vw, 1.125rem);
     --fs-20: clamp(1.25rem, 1.2vw, 1.25rem);
@@ -39,7 +34,9 @@ body {
     font-size: var(--fs-normal);
     color: var(--color-primary);
     background-color: var(--color-bg);
-    gap: 200px;
+    background-image: url("/assets/images/LogoBG.svg");
+    background-repeat: repeat;
+    background-size: 20px;  
 }
 
 header {
@@ -50,18 +47,12 @@ main {
     padding: 64px clamp(32px, calc(50% - 720px), 100%) 64px;
 }
 
-/* * {
-    outline: 1px solid red;
-} */
+#mainStart,
+#aboutME,
+#mySkills,
+#portfolio,
+#references,
+#contact {
+    scroll-margin-top: 20vh;    
+}
 
-/* section,footer{
-    min-height: 100dvh;
-    gap: 200px;
-   
-    border: 2px solid greenyellow;
-
-} */
-
-/* html, body {
-  overflow-x: hidden;
-} */

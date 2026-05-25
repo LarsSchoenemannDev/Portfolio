@@ -24,25 +24,20 @@ let currentLang = "en";
 function setLanguage(lang) {
     currentLang = lang;
     document.documentElement.lang = lang;
-
     document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.dataset.i18n;
         if (translations[lang][key] !== undefined) {
             el.innerHTML = translations[lang][key];
         }
     });
-
     document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
         const key = el.dataset.i18nPlaceholder;
         if (translations[lang][key] !== undefined) {
             el.placeholder = translations[lang][key];
         }
     });
-        
-    document.querySelectorAll('a[href="/legal"]').forEach(link => {
-        link.href = lang === 'de' ? '/legal-de' : '/legal-en';
-    });
 
+    document.querySelector(".legal-link").href = (lang === "de") ? "legalNotesDE.html" : "legalNotesEN.html";
     document.querySelectorAll(".language-button .header-button").forEach(btn => {
         btn.classList.toggle("active", btn.textContent.trim().toLowerCase() === lang);
     });
@@ -54,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
             setLanguage(btn.textContent.trim().toLowerCase());
         });
     });
-
     setLanguage(currentLang);
 });
 

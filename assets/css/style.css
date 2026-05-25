@@ -26,17 +26,15 @@ header {
     background-color: #0000;
 }
 
-.heightDVH {
-    height: 100dvh;
-}
-
 .left-side {
     display: flex;
     flex-direction: column;
     z-index: 1000;
+
+    svg {
+        width: 66px;
+    }
 }
-
-
 
 .header-menu-right {
     display: flex;
@@ -149,7 +147,6 @@ header {
     align-items: center;
     flex: 1;
     gap: 85px;
-    margin-top: 240px;
 }
 
 .menu-item {
@@ -299,9 +296,28 @@ header {
     filter: drop-shadow(0 0 0.75rem var(--color-secondary));
 }
 
+.header-main {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.scale-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: stretch;
+}
 
 h1 {
-    margin: 0 0;
     font-size: var(--fs-128);
     font-style: inherit;
     font-weight: 800;
@@ -324,25 +340,20 @@ h2:hover {
     color: var(--color-secondary);
 }
 
-.top-main {
-    width: fit-content;
-    margin: 0 auto;
-    margin-top: 0px;
-    margin-top: 180px;
-}
-
 .seperator-wrapper {
     display: flex;
-    flex: 1;
     align-items: center;
 }
 
 .seperator {
-    display: flex;
     flex: 1;
     height: 3px;
     background-color: var(--color-primary);
-    margin: 0 0;
+
+}
+
+.main-footer {
+    flex-grow: 2;
 }
 
 .name {
@@ -366,6 +377,7 @@ h2:hover {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
 }
+
 
 .right-side-animation,
 .right-side-text {
@@ -536,35 +548,39 @@ article {
 .arrow-right-side {
     display: flex;
     justify-content: flex-end;
-    animation: moveDiagonal 1.5s linear forwards paused;
+
     width: 100%;
+    height: 420px;
 
 }
 
 .arrow-right-side:hover {
-    animation-play-state: running;
+    animation: moveDiagonal 3.5s linear forwards infinite;
+
+    svg {
+        animation-play-state: running;
+    }
 }
 
 @keyframes moveDiagonal {
-    from {
+    0% {
         transform: translate(0, 0);
     }
 
-    to {
-        transform: translate(-80px, 80px);
+    50% {
+        transform: translate(-60px, 60px);
+    }
+
+    100% {
+        transform: translate(0, 0);
     }
 }
 
-#mySkills {
-    scroll-margin-top: 200px;
-}
-
 .skills {
-
     border: 4px solid var(--color-primary);
     padding: 40px 60px;
     position: relative;
-    scroll-margin-top: 200px;
+
     font-family: "Overpass";
 }
 
@@ -682,23 +698,31 @@ article {
 .arrow-left-side {
     display: flex;
     justify-content: flex-start;
-    animation: moveDiagonalTwo 1.5s linear forwards paused;    
+    height: 420px;
+    max-width: 60%;
 }
 
 .arrow-left-side:hover {
-    animation-play-state: running;
+    animation: moveDiagonalTwo 3.5s linear forwards infinite;
+
+    svg {
+        animation-play-state: running;
+    }
 }
 
 @keyframes moveDiagonalTwo {
-    from {
+    0% {
         transform: translate(0, 0);
     }
 
-    to {
-        transform: translate(80px, 80px);
+    50% {
+        transform: translate(60px, 60px);
+    }
+
+    100% {
+        transform: translate(0, 0);
     }
 }
-
 
 .section-header {
     display: flex;
@@ -1097,11 +1121,10 @@ blockquote {
 }
 
 .contact-subtitle {
-    color: var(--color-secondary);
     font-family: 'Overpass';
     font-style: normal;
     font-weight: 700;
-    font-size: 32px;
+    font-size: var(--fs-24);
     line-height: 120%;
     text-align: center;
     color: var(--color-secondary);
@@ -1147,6 +1170,27 @@ blockquote {
     width: 100%;
 }
 
+.footer-arrow-up {
+    svg:hover {
+        animation: up 2s linear forwards infinite;
+    }
+}
+
+@keyframes up {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, -20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+
+}
+
 .form-footer-wrapper button {
     grid-column: 2;
 }
@@ -1185,6 +1229,17 @@ blockquote {
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
     color: var(--color-bg);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--color-bg);
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border: 2px solid var(--color-bg);
 }
 
 .checkbox-label {
@@ -1309,10 +1364,6 @@ blockquote {
 
 
 @media (max-width: 1100px) {
-    body {
-        background-color: rgb(70, 80, 76);
-    }
-
     .portfolio-left,
     .portfolio-right {
         display: flex;
@@ -1332,13 +1383,18 @@ blockquote {
         width: 100%;
         max-width: 500px;
     }
-
 }
 
-
 @media (max-width: 840px) {
-    .top-main>h1 {
-        font-size: var(--fs-78);
+    .scale-wrapper {
+
+        h1 {
+            font-size: var(--fs-78);
+        }
+
+        p {
+            font-size: var(--fs-45);
+        }
     }
 
     h2 {
@@ -1347,6 +1403,7 @@ blockquote {
 
     .seperator-wrapper>h4 {
         font-size: var(--fs-24);
+
     }
 
     .name {
@@ -1407,9 +1464,35 @@ blockquote {
             display: none;
         }
     }
+
+    .menu-item {
+        a {
+            font-size: var(--fs-78);
+        }
+    }
 }
 
 @media (max-width: 550px) {
+
+    .left-side {
+        svg {
+            width: 45px;
+        }
+    }
+
+    .header-main {
+        padding-top: 120px;
+    }
+
+    .contact-heading {
+        padding-top: 62px;
+        font-size: var(--fs-48);
+    }
+
+    .contact-inner {
+        margin-top: 40px;
+    }
+
     .contact-footer {
         gap: 24px;
         flex-direction: column-reverse;
@@ -1448,5 +1531,25 @@ blockquote {
         & h2 {
             font-size: var(--fs-48);
         }
+    }
+
+    .overlay-nav {
+        padding-top: 120px;
+    }
+
+    .overlay-icons {
+        justify-content: center;
+    }
+
+    .form-footer-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 92px;
+    }
+}
+
+@media (max-height: 1000px) {
+    .scroll-wrapper {
+        transform: translateY(-230px);
     }
 }
