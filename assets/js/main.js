@@ -9,47 +9,73 @@
 /** @type {FormValidationState} Tracks real-time validation status for each form field. */
 const valid = { name: false, mail: false, message: false, policy: false };
 
-/** @type {string} Currently active language code. Defaults to English. */
-let currentLang = "en";
+/** @type {string} Currently active language code. Defaults to German. */
+let currentLang = "de"
 
 /**
- * Updates the document's language attribute and applies localized strings to
- * elements marked with `data-i18n` (innerHTML) and `data-i18n-placeholder` (placeholder).
- * Also updates the active CSS class on language toggle buttons.
- *
- * @param {string} lang - The target language code (e.g., 'en', 'de', 'fr').
- * @returns {void}
- * @global {Object} translations - Expected global dictionary: `{ en: { key: "text" }, de: { key: "text" } }`
+ * Updates the documents language attribute and applies localized strings.
  */
-function setLanguage(lang) {
-    currentLang = lang;
-    document.documentElement.lang = lang;
+function setLanguage() {
+    if (!localStorage.getItem("language")) {
+        localStorage.setItem("language", currentLang);
+    }
+    document.querySelectorAll(".language-button .header-button").forEach(btn => {
+        const btnLang = btn.dataset.lang || btn.textContent.trim().toLowerCase();
+        btn.classList.toggle("active", btnLang === currentLang);
+    });
+    translate()
+    setPageLinks()
+}
+
+/**
+ * Translates all elements with [data-i18n] and [data-i18n-placeholder]
+ * attributes using the current language from `currentLang`.
+ *
+ * @returns {void}
+ */
+function translate() {
     document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.dataset.i18n;
-        if (translations[lang][key] !== undefined) {
-            el.innerHTML = translations[lang][key];
+        if (translations[currentLang][key] !== undefined) {
+            el.innerHTML = translations[currentLang][key];
         }
     });
     document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
         const key = el.dataset.i18nPlaceholder;
-        if (translations[lang][key] !== undefined) {
-            el.placeholder = translations[lang][key];
+        if (translations?.[currentLang]?.[key] !== undefined) {
+            el.placeholder = translations[currentLang][key];
         }
-    });
-
-    document.querySelector(".legal-link").href = (lang === "de") ? "legalNotesDE.html" : "legalNotesEN.html";
-    document.querySelectorAll(".language-button .header-button").forEach(btn => {
-        btn.classList.toggle("active", btn.textContent.trim().toLowerCase() === lang);
     });
 }
 
+/**
+ * Updates href attributes of legal and privacy links
+ * based on the current language (`currentLang`).
+ *
+ * @returns {void}
+ */
+function setPageLinks() {
+    const legalLink = document.querySelector(".legal-link");
+    if (legalLink) {
+        legalLink.href = currentLang === "de" ? "legalNotesDE.html" : "legalNotesEN.html";
+    }
+    const privacyLink = document.querySelector(".privacy-link");
+    if (privacyLink) {
+        privacyLink.href = currentLang === "de" ? "PrivacyPolicyDE.html" : "PrivacyPolicyEN.html";
+    }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+    currentLang = localStorage.getItem("language") || currentLang;
+
     document.querySelectorAll(".language-button .header-button").forEach(btn => {
         btn.addEventListener("click", () => {
-            setLanguage(btn.textContent.trim().toLowerCase());
+            currentLang = btn.textContent.trim().toLowerCase();
+            localStorage.setItem("language", currentLang);
+            setLanguage();
         });
     });
-    setLanguage(currentLang);
+    setLanguage();
 });
 
 /**
@@ -198,30 +224,24 @@ function approvalPolicy() {
 }
 
 /**
- * Checks all validation states and returns invalid fields.
+ * Evaluates the overall form validation state. Enables the submit button
+ * and sets its cursor to `pointer` only when all tracked fields are valid.
+ * Otherwise, disables the button and sets cursor to `not-allowed`.
  *
- * @returns {Array} invalid field names
+ * @returns {void}
  */
 function handleSubmit() {
-    const button = document.querySelector('button[type="submit"]');
-
-    // Alle Felder sammeln die false sind
-    const invalidFields = Object.entries(valid)
-        .filter(([key, value]) => value === false)
-        .map(([key]) => key);
-
-    const allValid = invalidFields.length === 0;
+    let button = document.querySelector('button[type="submit"]');
+    let allValid = Object.values(valid).every(e => e === true);
 
     if (allValid) {
         button.disabled = false;
         button.style.cursor = "pointer";
         console.log("you can");
+
     } else {
         button.disabled = true;
         button.style.cursor = "not-allowed";
-        console.log("not yet");
-
-        console.log("Missing:", invalidFields);
+        console.log("not jet");
     }
-    return invalidFields;
 }

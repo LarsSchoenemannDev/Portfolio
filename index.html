@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='EN'>
+<html lang="">
 
 <head>
     <meta charset='utf-8'>
@@ -40,11 +40,11 @@
             <div class="right-side">
                 <div class="header-menu-right">
                     <div class="language-button">
-                        <button class="header-button active" aria-label="Switch language to English">
-                            <span class="button-text">EN</span>
-                        </button>
-                        <button class="header-button" aria-label="Sprache auf Deutsch wechseln">
+                        <button class="header-button active" aria-label="Sprache auf Deutsch wechseln">
                             <span class="button-text">DE</span>
+                        </button>
+                        <button class="header-button" aria-label="Switch language to English">
+                            <span class="button-text">EN</span>
                         </button>
                     </div>
                     <button class="burger-menu" id="burgerBtn" onclick="toggleMenu()" aria-label="Open navigation"
@@ -238,7 +238,7 @@
                             <span data-i18n="about.remote">Open to work Remote</span>
                         </p>
                         <div class="button-wrapper">
-                            <button class="buttonN" data-i18n="about.cta">Let's talk</button>
+                            <a href="#contact" class="buttonA" data-i18n="about.cta">Let's talk</a>
                         </div>
                     </div>
                 </div>
@@ -399,7 +399,7 @@
             <div class="portfolio-projects">
                 <div class="portfolio-left">
                     <div class="project-image">
-                        <a href=""><img src="./assets/images/join.png" loading="lazy"
+                        <a href=""><img src="./assets/images/join.jpg" loading="lazy"
                                 alt="Join – Kanban task manager app"></a>
                         <div class="project-arrow" aria-hidden="true">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
@@ -419,10 +419,9 @@
                         <p data-i18n="portfolio.join.desc">Task manager inspired by the Kanban System. Create and
                             organise tasks using drag and drop
                             functions, assign users and categories.</p>
-                        <div class="button-wrapper">
-                            <a href="https://github.com" target="_blank"
+                        <div class="button-wrapper ">
+                            <a href="https://github.com/LarsSchoenemannDev/Join" target="_blank"
                                 rel="noopener noreferrer"><button>Github</button></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer"></a>
                         </div>
                     </div>
                     <div class="project-number" aria-label="Project 1 of 3">
@@ -431,8 +430,7 @@
                 </div>
                 <div class="portfolio-right">
                     <div class="project-image">
-                        <img src="./assets/images/el-pollo-loco.png" loading="lazy"
-                            alt="El Pollo Loco – jump-and-run game">
+                        <img src="./assets/images/elpollp.jpg" loading="lazy" alt="El Pollo Loco – jump-and-run game">
                         <div class="project-arrow" aria-hidden="true">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
                                 <rect x="57.9414" y="24" width="48" height="48" rx="24"
@@ -452,9 +450,8 @@
                             and
                             Canva.</p>
                         <div class="button-wrapper">
-                            <a href="https://github.com" target="_blank"
+                            <a href="https://github.com/LarsSchoenemannDev/El-Pollo-Loco/tree/main" target="_blank"
                                 rel="noopener noreferrer"><button>Github</button></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer"></a>
                         </div>
                     </div>
                     <div class="project-number project-number-right" aria-label="Project 2 of 3">
@@ -463,7 +460,7 @@
                 </div>
                 <div class="portfolio-left">
                     <div class="project-image">
-                        <img src="./assets/images/pokedex.png" loading="lazy"
+                        <img src="./assets/images/pokedex.jpg" loading="lazy"
                             alt="Pokédex – app fetching data from the PokéAPI">
                         <div class="project-arrow" aria-hidden="true">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
@@ -484,7 +481,6 @@
                         <div class="button-wrapper">
                             <a href="https://github.com" target="_blank"
                                 rel="noopener noreferrer"><button>Github</button></a>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer"></a>
                         </div>
                     </div>
                     <div class="project-number" aria-label="Project 3 of 3">
@@ -645,7 +641,7 @@
             </div>
             <div class="contact-footer">
                 <div class="footer-left">
-                    <svg id="Ebene_1" style="width: 75px; fill: #FFFCF3;" aria-label="LS Logo" role="img"
+                    <svg id="Ebene_1" style="width: 66px; fill: #FFFCF3;" aria-label="LS Logo" role="img"
                         data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110.5 56.03">
                         <path
                             d="M0,.09l16.95.2v6.58s-8.01-.09-8.01-.09v42.49s8.01.09,8.01.09v6.58S0,55.74,0,55.74V.09Z" />
@@ -687,14 +683,14 @@
                 </div>
             </div>
             <div class="footer-wrapper-legal">
-                <span class="footer-legal">
-                    <a href="legalNotesEN.html" class="legal-link" data-i18n="footer.legal">Legal notice</a>
-                </span>
+                <div class="footer-legal">
+                    <a href="legalNotesDE.html" class="legal-link" data-i18n="footer.legal">Impressum</a>
+                    <a href="PrivacyPolicyDE.html" class="privacy-link" data-i18n="footer.privacy">PrivacyPolicy</a>
+                </div>
             </div>
         </div>
     </footer>
-    <script src="assets/js/main.js"></script>
     <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/main.js"></script>    
 </body>
-
 </html>

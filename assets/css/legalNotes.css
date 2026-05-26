@@ -1,62 +1,103 @@
-        .legal-wrapper {
-            max-width: 920px;
-            margin: 0 auto;
-            padding: 220px 0px 220px;
+    .left-side {
+        .svg {
+            width: 66px;
         }
+    }
 
+    .legal-wrapper {
+        margin: 0 auto;
+        padding: 220px clamp(32px, calc(50% - 720px), 100%) 64px;
+    }
+
+    .legal-wrapper h1 {
+        font-family: 'Syne';
+        font-style: normal;
+        font-weight: 800;
+        font-size: var(--fs-48);
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        color: var(--color-primary);
+    }
+
+    .legal-wrapper h2 {
+        font-family: 'Overpass';
+        font-style: normal;
+        font-weight: 800;
+        font-size: var(--fs-24);
+        line-height: 120%;
+        color: var(--color-secondary);
+        margin: 36px 0 8px 0px;
+    }
+
+    .legal-wrapper p,
+    .legal-wrapper li {
+        font-family: 'Overpass';
+        font-style: normal;
+        font-weight: 400;
+        font-size: var(--fs-normal);
+        line-height: 120%;
+        color: var(--color-primary)
+    }
+
+    .legal-wrapper ul {
+        padding-left: 20px;
+        margin-bottom: 12px;
+    }
+
+    .legal-wrapper a {
+        color: var(--color-secondary);
+        text-decoration: none;
+    }
+
+    .legal-wrapper a:hover {
+        text-decoration: underline;
+    }
+
+    .legal-back {
+        color: var(--color-secondary);
+        text-decoration: none;
+    }
+
+    .legal-back:hover {
+        text-decoration: underline;
+    }
+
+    a {
+        color: var(--color-primary);
+        text-decoration: none;
+    }
+
+    h4 {
+        margin: 8px 0;
+    }
+
+    svg {
+        width: 66px;
+    }
+
+    .footer-legal {
+        padding: 0 clamp(32px, calc(50% - 720px), 100%) 32px;
+    }
+
+    @media(max-width:600px) {
         .legal-wrapper h1 {
-            font-family: 'Syne';
-            font-style: normal;
-            font-weight: 800;
-            font-size: 78px;
-            line-height: 100%;
-            letter-spacing: 0.01em;
-            color: var(--color-primary);
+            font-size: var(--fs-45);
+            overflow-wrap: break-word;
         }
 
         .legal-wrapper h2 {
-            font-family: 'Overpass';
-            font-style: normal;
-            font-weight: 800;
-            font-size: 24px;
-            line-height: 120%;
-            color: var(--color-secondary);
-            margin: 36px 0 8px 0px;
+            font-size: var(--fs-20);
+            font-weight: 700;
         }
 
-        .legal-wrapper p,
-        .legal-wrapper li {
-            font-family: 'Overpass';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 120%;
-            color: var(--color-primary)
+        .legal-wrapper {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 220px 32px 220px;
         }
 
-        .legal-wrapper ul {
-            padding-left: 20px;
-            margin-bottom: 12px;
+        .svg {
+            width: 42px;
         }
 
-        .legal-wrapper a {
-            color: var(--color-secondary);
-            text-decoration: none;
-        }
-
-        .legal-wrapper a:hover {
-            text-decoration: underline;
-        }
-
-        .legal-back {
-            color: var(--color-secondary);
-            text-decoration: none;
-        }
-
-        .legal-back:hover {
-            text-decoration: underline;
-        }
-
-        .footer-legal{
-            display: none;
-        }
+    }
