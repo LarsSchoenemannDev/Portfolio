@@ -35,7 +35,7 @@ const translations = {
     "contact.subtitle": "Neues Projekt im Kopf?",
     "contact.desc": "Meld dich! Lass uns über deine Ideen sprechen und sie umsetzen.",
     "contact.submit": "Nachricht senden",
-    "contact.policy": "Ich habe die <a href='/privacy' class='policy-link'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
+    "contact.policy": "Ich habe die <a href='PrivacyPolicyDE.html' class='policy-link'>Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.",
 
     "placeholder.name": "Dein Name",
     "placeholder.email": "Deine E-Mail",
@@ -86,7 +86,7 @@ const translations = {
     "contact.subtitle": "Want to discuss a new project?",
     "contact.desc": "Say hello! Let's discuss your ideas and make it happen.",
     "contact.submit": "Send message",
-    "contact.policy": "I've read the <a href='/privacy' class='policy-link'>privacy policy</a> and agree to the processing of my data as outlined.",
+    "contact.policy": "I've read the <a href='PrivacyPolicyDE.html' class='policy-link'>privacy policy</a> and agree to the processing of my data as outlined.",
 
     "placeholder.name": "Your name",
     "placeholder.email": "Your email",

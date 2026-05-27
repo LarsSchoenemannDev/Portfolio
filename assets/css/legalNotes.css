@@ -5,7 +5,10 @@
     }
 
     .legal-wrapper {
-        margin: 0 auto;
+        display: flex;
+        flex-direction: column;        
+        min-height: 100dvh;
+        gap: 12px;
         padding: 220px clamp(32px, calc(50% - 720px), 100%) 64px;
     }
 
@@ -76,7 +79,7 @@
     }
 
     .footer-legal {
-        padding: 0 clamp(32px, calc(50% - 720px), 100%) 32px;
+        padding: 0 clamp(32px, calc(50% - 720px), 100%) 32px;        
     }
 
     @media(max-width:600px) {
