@@ -231,8 +231,6 @@ function handleSubmit(event) {
     if (allValid) {
         postMessage();
         clearForm()
-    } else {
-        console.log("Formular unvollständig");
     }
 }
 
