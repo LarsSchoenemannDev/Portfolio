@@ -145,6 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
 /**
  * Validates a standard text input (e.g., name, message) by checking if its
  * trimmed value meets the minimum length requirement (3 characters).
@@ -158,7 +159,6 @@ document.addEventListener("DOMContentLoaded", () => {
 function formValidation(inputId) {
     let minLength = 3;
     let input = document.getElementById(inputId);
-
     let errorIcon = input.nextElementSibling;
     let successIcon = errorIcon.nextElementSibling;
     let requiredText = successIcon.nextElementSibling;
@@ -174,7 +174,6 @@ function formValidation(inputId) {
         requiredText.classList.remove("hiddenBlock");
         valid[input["name"]] = false;
     }
-    handleSubmit();
 }
 
 /**
@@ -201,7 +200,7 @@ function validateMail() {
         requiredText.classList.remove("hiddenBlock");
         valid.mail = false;
     }
-    handleSubmit();
+
 }
 
 /**
@@ -220,28 +219,71 @@ function approvalPolicy() {
         valid.policy = false;
         errorSpan.classList.remove("hiddenBlock");
     }
-    handleSubmit();
+}
+
+function handleSubmit(event) {
+    event.preventDefault();
+    formValidation("contactName");
+    validateMail();
+    formValidation("contactMessage");
+    approvalPolicy();
+    let allValid = Object.values(valid).every(e => e === true);
+    if (allValid) {
+        postMessage();
+        clearForm()
+    } else {
+        console.log("Formular unvollständig");
+    }
 }
 
 /**
- * Evaluates the overall form validation state. Enables the submit button
- * and sets its cursor to `pointer` only when all tracked fields are valid.
- * Otherwise, disables the button and sets cursor to `not-allowed`.
- *
+ * Clear formular im footer
  * @returns {void}
  */
-function handleSubmit() {
-    let button = document.querySelector('button[type="submit"]');
-    let allValid = Object.values(valid).every(e => e === true);
+function clearForm() {
+    const checkbox = document.getElementById("checkbox");
+    const messageSVG = document.querySelectorAll(".contact-form svg")
+    const messageSpan = document.querySelectorAll(".contact-form span")
+    const inputs = document.querySelectorAll(
+        ".contact-form input,.contact-form textarea"
+    );
+    messageSVG.forEach(e => { e.classList.add("hidden") });
+    messageSpan.forEach(e => { e.classList.add("hiddenBlock") });
+    inputs.forEach(input => { input.value = "" });;
+    checkbox.checked = false;
+}
 
-    if (allValid) {
-        button.disabled = false;
-        button.style.cursor = "pointer";
-        console.log("you can");
+function postMessage() {
+    event.preventDefault();
+    const body = {
+        name: document.getElementById("contactName").value,
+        email: document.getElementById("contactEmail").value,
+        message: document.getElementById("contactMessage").value
+    };
+    fetch("sendMail.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body)
+    })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                launchToast()
+                clearForm()
+            } else {
+                errorLaunchToast()
+            }
+        })
+}
 
-    } else {
-        button.disabled = true;
-        button.style.cursor = "not-allowed";
-        console.log("not jet");
-    }
+function launchToast() {
+    var x = document.getElementById("toast")
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+}
+
+function errorLaunchToast() {
+    var x = document.getElementById("toastError")
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
 }

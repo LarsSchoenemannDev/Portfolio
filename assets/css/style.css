@@ -22,7 +22,7 @@ header {
 .header-menu {
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
     padding: 16px 0;
 }
 
@@ -67,6 +67,7 @@ header {
 .header-button {
     position: relative;
     text-decoration: none;
+
     &::after {
         content: "";
         position: absolute;
@@ -77,6 +78,7 @@ header {
         background-color: var(--color-secondary);
         transition: width 0.2s ease;
     }
+
     &:hover {
         &::after {
             width: 40%;
@@ -565,6 +567,8 @@ article {
     }
 }
 
+.button-contact {}
+
 .button-wrapper {
     & button {
         padding: 12px 0;
@@ -642,6 +646,7 @@ article {
     background-color: var(--color-bg);
     padding: 0 2px;
     text-align: center;
+
 }
 
 .my-skills:hover {
@@ -835,7 +840,7 @@ article {
     position: relative;
     display: flex;
     margin-bottom: 160px;
-    gap: 100px;
+    gap: 80px;
 }
 
 .portfolio-left {
@@ -956,7 +961,7 @@ article {
 }
 
 .project-info {
-    flex: 2;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1003,7 +1008,7 @@ article {
 }
 
 .project-number {
-    flex: 3;
+    flex: none;
     display: flex;
     justify-content: flex-start;
     flex-direction: row-reverse;
@@ -1440,11 +1445,164 @@ blockquote {
     display: block;
 }
 
-.toastNotification {
-    display: flex;
-    background-color: #fffcf3af;
-    border-radius: 12px;
+#toast,
+#toastError {
+    visibility: hidden;
+    max-width: 50px;
+    height: 50px;
+    margin: auto;
+    background-color: #333;
+    color: var(--color-bg);
+    text-align: center;
+    border-radius: 2px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    font-size: 17px;
+    white-space: nowrap;
 
+}
+
+#toast,
+#toastError #img {
+    width: 50px;
+    height: 50px;
+    float: left;
+    padding-top: 12px;
+    padding-bottom: 16px;
+    box-sizing: border-box;
+    background-color: rgb(70, 69, 69);
+    color: var(--color-primary);
+}
+
+#toast,
+#toastError #desc {
+    color: var(--color-bg);
+    padding: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+}
+
+#toastError.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes expand {
+    from {
+        min-width: 50px
+    }
+
+    to {
+        min-width: 350px
+    }
+}
+
+@keyframes expand {
+    from {
+        min-width: 50px
+    }
+
+    to {
+        min-width: 500px
+    }
+}
+
+@-webkit-keyframes stay {
+    from {
+        min-width: 500px
+    }
+
+    to {
+        min-width: 350px
+    }
+}
+
+@keyframes stay {
+    from {
+        min-width: 350px
+    }
+
+    to {
+        min-width: 350px
+    }
+}
+
+@-webkit-keyframes shrink {
+    from {
+        min-width: 350px;
+    }
+
+    to {
+        min-width: 50px;
+    }
+}
+
+@keyframes shrink {
+    from {
+        min-width: 350px;
+    }
+
+    to {
+        min-width: 50px;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 60px;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 60px;
+        opacity: 0;
+    }
 }
 
 @media (max-width: 1100px) {
