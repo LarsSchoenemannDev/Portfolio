@@ -188,7 +188,7 @@ function validateMail() {
     let errorIcon = mail.nextElementSibling;
     let successIcon = errorIcon.nextElementSibling;
     let requiredText = successIcon.nextElementSibling;
-    let mailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    let mailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/;
     if (mailRegex.test(mail.value)) {
         successIcon.classList.remove("hidden");
         errorIcon.classList.add("hidden");

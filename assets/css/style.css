@@ -31,7 +31,7 @@ body,
 .header-menu {
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
     background-color: var(--color-bg);
 }
 
@@ -611,9 +611,8 @@ article {
 .arrow-right-side {
     display: flex;
     justify-content: flex-end;
-
     width: 100%;
-    height: 420px;
+    min-height: 280px;
 
 }
 
@@ -763,8 +762,8 @@ article {
 .arrow-left-side {
     display: flex;
     justify-content: flex-start;
-    height: 420px;
-    max-width: 60%;
+    height: 310px;
+    max-width: fit-content;
 }
 
 .arrow-left-side:hover {
@@ -1212,6 +1211,7 @@ blockquote {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    gap: 3px;
 
     .form-group {
         position: relative;
@@ -1281,8 +1281,7 @@ blockquote {
     padding: 14px 12px;
     outline: none;
     width: 100%;
-    font-family: inherit;
-    margin-bottom: 8px;
+    margin: 4px;
 }
 
 .contact-form textarea {
@@ -1304,7 +1303,9 @@ blockquote {
 .contact-form input[type="text"]:focus,
 .contact-form input[type="email"]:focus,
 .contact-form textarea:focus {
-    border: 2px solid var(--color-bg);
+    outline: 3px solid var(--color-bg);
+    border-bottom: 1px solid transparent;
+
 }
 
 .checkbox-label {
@@ -1703,6 +1704,7 @@ blockquote {
 
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 30px 0;
     }
 
     .skills-footer-wrapper {
@@ -1777,6 +1779,11 @@ blockquote {
         width: fit-content;
     }
 
+    .skills-footer {
+        flex-direction: column;
+        padding-top: 32px;
+    }
+
     .about-me-left {
         article {
             padding: 0;
@@ -1806,8 +1813,6 @@ blockquote {
         flex-direction: column;
         gap: 92px;
     }
-
-
 }
 
 @media (max-height: 1000px) {

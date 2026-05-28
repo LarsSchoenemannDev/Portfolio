@@ -86,7 +86,7 @@ const translations = {
     "contact.subtitle": "Want to discuss a new project?",
     "contact.desc": "Say hello! Let's discuss your ideas and make it happen.",
     "contact.submit": "Send message",
-    "contact.policy": "I've read the <a href='PrivacyPolicyDE.html' target='_blank' rel='noopener noreferrer' class='policy-link'>privacy policy</a> and agree to the processing of my data as outlined.",
+    "contact.policy": "I've read the <a href='PrivacyPolicyEN.html' target='_blank' rel='noopener noreferrer' class='policy-link'>privacy policy</a> and agree to the processing of my data as outlined.",
 
     "placeholder.name": "Your name",
   "placeholder.email": "Your email",
