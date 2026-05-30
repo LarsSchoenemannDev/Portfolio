@@ -240,7 +240,7 @@ function handleSubmit(event) {
  */
 function clearForm() {
     const checkbox = document.getElementById("checkbox");
-    const messageSVG = document.querySelectorAll(".contact-form svg")
+    const messageSVG = document.querySelectorAll("form-group svg")
     const messageSpan = document.querySelectorAll(".contact-form span")
     const inputs = document.querySelectorAll(
         ".contact-form input,.contact-form textarea"
@@ -277,7 +277,7 @@ function postMessage() {
 function launchToast() {
     var x = document.getElementById("toast")
     x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 50000);
 }
 
 function errorLaunchToast() {

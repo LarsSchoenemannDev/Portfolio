@@ -19,9 +19,9 @@ const translations = {
     "skills.learning": "Ich lerne immer gerne Neues!",
 
     "portfolio.heading": "Portfolio",
-    "portfolio.subtext": "Hier findest du eine Auswahl meiner Projekte interagiere mit ihnen und sieh meine Skills in Aktion.",
+    "portfolio.subtext": "Hier findest du, eine Auswahl meiner Projekte interagiere mit ihnen und sieh meine Skills in Aktion.",
     "portfolio.join.desc": "Task-Manager inspiriert vom Kanban-System. Aufgaben erstellen und per Drag & Drop organisieren, Nutzer und Kategorien zuweisen.",
-    "portfolio.pollo.desc": "Ein Jump-and-Run-Spiel auf Basis von objektorientierter Programmierung und Canvas.",
+    "portfolio.pollo.desc": "Ein 2D-Jump-and-Run-Spiel, umgesetzt mit objektorientierter Programmierung und HTML5 Canvas.",
     "portfolio.pokedex.desc": "Eine Pokédex-App, die Daten von der PokéAPI abruft.",
 
     "ref.heading": "Referenzen",
@@ -48,6 +48,8 @@ const translations = {
 
     "footer.legal": "Impressum",
     "footer.privacy": "Datenschutz",
+    "footer.right": "Formular erfolgreich gesendet",
+    "footer.fetchError": "Leider ist ein Fehler aufgetretten",
   },
 
   en: {
@@ -72,7 +74,7 @@ const translations = {
     "portfolio.heading": "Portfolio",
     "portfolio.subtext": "Explore a selection of my work here Interact with projects to see my skills in action.",
     "portfolio.join.desc": "Task manager inspired by the Kanban System. Create and organise tasks using drag and drop functions, assign users and categories.",
-    "portfolio.pollo.desc": "A jump-and-run game based on object-oriented programming and Canva.",
+    "portfolio.pollo.desc": "A 2D platformer game built using object-oriented programming and HTML5 Canvas.",
     "portfolio.pokedex.desc": "A Pokédex app fetching data from the PokéAPI.",
 
     "ref.heading": "References",
@@ -89,17 +91,19 @@ const translations = {
     "contact.policy": "I've read the <a href='PrivacyPolicyEN.html' target='_blank' rel='noopener noreferrer' class='policy-link'>privacy policy</a> and agree to the processing of my data as outlined.",
 
     "placeholder.name": "Your name",
-  "placeholder.email": "Your email",
-  "placeholder.message": "Your message",
+    "placeholder.email": "Your email",
+    "placeholder.message": "Your message",
 
-  "error.name": "Your name is required",
-  "error.email": "Your email is required",
-  "error.message": "Your message is empty",
-  "error.policy": "Please accept the privacy policy.",
+    "error.name": "Your name is required",
+    "error.email": "Your email is required",
+    "error.message": "Your message is empty",
+    "error.policy": "Please accept the privacy policy.",
 
-  "footer.legal": "Legal notice",
-  "footer.privacy": "PrivacyPolicy",
-}
+    "footer.legal": "Legal notice",
+    "footer.privacy": "PrivacyPolicy",
+    "footer.right": "Form submitted successfully",
+    "footer.fetchError": "Unfortunately, an error occurred.",
+  }
 };
 
 

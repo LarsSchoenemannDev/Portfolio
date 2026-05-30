@@ -32,7 +32,6 @@ body,
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-bg);
 }
 
 .left-side {
@@ -613,16 +612,16 @@ article {
     justify-content: flex-end;
     width: 100%;
     min-height: 280px;
-
+    animation: moveDiagonal 3.5s linear forwards infinite;
 }
 
-.arrow-right-side:hover {
+/* .arrow-right-side:hover {
     animation: moveDiagonal 3.5s linear forwards infinite;
 
     svg {
         animation-play-state: running;
     }
-}
+} */
 
 @keyframes moveDiagonal {
     0% {
@@ -764,14 +763,7 @@ article {
     justify-content: flex-start;
     height: 310px;
     max-width: fit-content;
-}
-
-.arrow-left-side:hover {
     animation: moveDiagonalTwo 3.5s linear forwards infinite;
-
-    svg {
-        animation-play-state: running;
-    }
 }
 
 @keyframes moveDiagonalTwo {
@@ -1818,5 +1810,49 @@ blockquote {
 @media (max-height: 1000px) {
     .scroll-wrapper {
         transform: translateY(-230px);
+    }
+}
+
+@media (orientation: landscape) {
+    header {
+        padding: 16px;
+    }
+
+    .overlay-nav {
+        gap: 54px;
+        padding-top: 24px;
+    }
+
+    .rotate {
+        writing-mode: inherit;
+        transform: inherit;
+    }
+
+    .main-footer {
+        flex-grow: inherit;
+        display: flex;
+        justify-content: space-around;
+        align-items: first baseline;
+    }
+
+    .scroll-wrapper {
+        transform: translateY(-100px);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    main section {
+        scale: .8;
+        opacity: 0.0;
+        animation: fade-in 1s linear forwards;
+        animation-timeline: view();
+        animation-range: entry
+    }
+
+    @keyframes fade-in {
+        to {
+            scale: 1;
+            opacity: 1;
+        }
     }
 }
