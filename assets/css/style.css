@@ -165,8 +165,7 @@ body,
     display: flex;
     flex-direction: column;
     height: 100dvh;
-    box-sizing: border-box;
-    overflow-y: auto;
+    padding-top: 80px;
     overscroll-behavior: contain;
 }
 
@@ -176,6 +175,7 @@ body,
     flex-direction: column;
     align-items: center;
     flex: 1;
+    overflow-y: auto;
     /* gap: 60px;
     margin-top: 70px; */
 }
@@ -281,12 +281,12 @@ body,
 .overlay-footer {
     background: var(--color-primary);
     clip-path: polygon(0 0, 100% 35%, 100% 100%, 0 100%);
-    /* padding-top: 96px; */
+    flex-shrink: 0;
 }
 
 .wrapper {
-    padding: 64px max(calc(50% - 720px), 64px);
-    /* padding-top: 0px; */
+    padding: 48px max(calc(50% - 720px));
+    
 }
 
 .say-hi {

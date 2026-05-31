@@ -1,13 +1,17 @@
+    body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    
     .left-side {
         .svg {
             width: 66px;
         }
     }
 
-    .legal-wrapper {
-        display: flex;
-        flex-direction: column;        
-        min-height: 100dvh;
+    .legal-wrapper {    
+        flex: 1;
         gap: 12px;
         padding: 220px clamp(32px, calc(50% - 720px), 100%) 64px;
     }
