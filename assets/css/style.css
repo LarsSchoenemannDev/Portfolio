@@ -1839,17 +1839,21 @@ blockquote {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+
     main section {
-        scale: .8;
-        opacity: 0.0;
         animation: fade-in 1s linear forwards;
         animation-timeline: view();
-        animation-range: entry
+        animation-range: entry 0% cover 30%
     }
 
     @keyframes fade-in {
+        from {
+            transform: scale(0.8);
+            opacity: 0.0;
+        }
+
         to {
-            scale: 1;
+            transform: scale(1);
             opacity: 1;
         }
     }
