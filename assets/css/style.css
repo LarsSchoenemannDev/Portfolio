@@ -615,14 +615,6 @@ article {
     animation: moveDiagonal 3.5s linear forwards infinite;
 }
 
-/* .arrow-right-side:hover {
-    animation: moveDiagonal 3.5s linear forwards infinite;
-
-    svg {
-        animation-play-state: running;
-    }
-} */
-
 @keyframes moveDiagonal {
     0% {
         transform: translate(0, 0);
@@ -761,7 +753,7 @@ article {
 .arrow-left-side {
     display: flex;
     justify-content: flex-start;
-    height: 310px;
+    height: 280px;
     max-width: fit-content;
     animation: moveDiagonalTwo 3.5s linear forwards infinite;
 }
@@ -1813,7 +1805,13 @@ blockquote {
     }
 }
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (max-width: 1220px) {
+    .header-main {
+        margin-top: 60px;
+    }
+}
+
+@media (orientation: landscape) and (max-width:700px) {
     header {
         padding: 16px;
     }

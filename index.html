@@ -593,7 +593,7 @@
                     <div class="form-group">
                         <label for="contact-name"></label>
                         <input id="contactName" type="text" name="name" placeholder="Your name" required
-                            autocomplete="name" oninput="formValidation(id)" data-i18n-placeholder="placeholder.name" />
+                            autocomplete="name" oninput="formValidation(id)" onblur="formValidation(id)" data-i18n-placeholder="placeholder.name" />
                         <svg class="hidden" width="26" height="26" viewBox="0 0 26 26" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -612,7 +612,7 @@
                     <div class="form-group">
                         <label for="contact-email"></label>
                         <input id="contactEmail" type="email" name="email" placeholder="Your email" required
-                            autocomplete="email" oninput="validateMail()" data-i18n-placeholder="placeholder.email" />
+                            autocomplete="email" oninput="validateMail()" onblur="formValidation(id)" data-i18n-placeholder="placeholder.email" />
                         <svg class="hidden" width="26" height="26" viewBox="0 0 26 26" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -631,7 +631,7 @@
                     <div class="form-group">
                         <label for="contact-message"></label>
                         <textarea id="contactMessage" name="message" placeholder="Your message" rows="7" required
-                            oninput="formValidation(id)" data-i18n-placeholder="placeholder.message"></textarea>
+                            oninput="formValidation(id)" onblur="formValidation(id)" data-i18n-placeholder="placeholder.message"></textarea>
                         <svg class="hidden" width="26" height="26" viewBox="0 0 26 26" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
