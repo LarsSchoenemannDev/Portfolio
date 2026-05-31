@@ -43,8 +43,8 @@ const translations = {
 
     "error.name": "Bitte gib deinen Namen ein",
     "error.email": "Bitte gib deine E-Mail ein",
-    "error.message": "Erfolgreich gesendet",
-    "error.policy": "Fehler beim Senden. Bitte erneut versuchen.",
+    "error.message": "Ihre Nachricht enthielt keinen Text",
+    "error.policy": "Bitte akzeptieren Sie die Datenschutzbestimmungen.",
 
     "footer.legal": "Impressum",
     "footer.privacy": "Datenschutz",
