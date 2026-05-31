@@ -252,7 +252,7 @@ function handleSubmit(event) {
  */
 function clearForm() {
     const checkbox = document.getElementById("checkbox");
-    const messageSVG = document.querySelectorAll("form-group svg")
+    const messageSVG = document.querySelectorAll(".form-group svg")
     const messageSpan = document.querySelectorAll(".contact-form span")
     const inputs = document.querySelectorAll(
         ".contact-form input,.contact-form textarea"
