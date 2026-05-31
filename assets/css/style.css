@@ -1444,161 +1444,88 @@ blockquote {
 #toast,
 #toastError {
     visibility: hidden;
-    max-width: 50px;
+    min-width: 50px;
     height: 50px;
-    margin: auto;
     background-color: #333;
     color: var(--color-bg);
-    text-align: center;
     border-radius: 2px;
     position: fixed;
     z-index: 1;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 30px;
     font-size: 17px;
     white-space: nowrap;
-
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
-#toast,
+#toast #img,
 #toastError #img {
+    min-width: 50px;
     width: 50px;
     height: 50px;
-    float: left;
-    padding-top: 12px;
-    padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
     box-sizing: border-box;
     background-color: rgb(70, 69, 69);
     color: var(--color-primary);
 }
 
-#toast,
+#toast #desc,
 #toastError #desc {
     color: var(--color-bg);
-    padding: 16px;
-    overflow: hidden;
+    padding: 0 20px;
     white-space: nowrap;
+    opacity: 0;
 }
 
-#toast.show {
-    visibility: visible;
-    -webkit-animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
-}
-
+#toast.show,
 #toastError.show {
     visibility: visible;
-    -webkit-animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+    animation: fadein 0.5s forwards,
+               expand  0.5s 0.5s forwards,
+               stay    3s   1s   forwards,
+               shrink  0.5s 4s   forwards,
+               fadeout 0.5s 4.5s forwards;
 }
 
-@-webkit-keyframes fadein {
-    from {
-        bottom: 0;
-        opacity: 0;
-    }
-
-    to {
-        bottom: 30px;
-        opacity: 1;
-    }
+#toast.show #desc,
+#toastError.show #desc {
+    animation: textfadein 0.3s 1s forwards;
 }
 
 @keyframes fadein {
-    from {
-        bottom: 0;
-        opacity: 0;
-    }
-
-    to {
-        bottom: 30px;
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes expand {
-    from {
-        min-width: 50px
-    }
-
-    to {
-        min-width: 350px
-    }
+    from { bottom: 0;    opacity: 0; }
+    to   { bottom: 30px; opacity: 1; }
 }
 
 @keyframes expand {
-    from {
-        min-width: 50px
-    }
-
-    to {
-        min-width: 500px
-    }
-}
-
-@-webkit-keyframes stay {
-    from {
-        min-width: 500px
-    }
-
-    to {
-        min-width: 350px
-    }
+    from { min-width: 50px;  }
+    to   { min-width: 400px; }
 }
 
 @keyframes stay {
-    from {
-        min-width: 350px
-    }
-
-    to {
-        min-width: 350px
-    }
-}
-
-@-webkit-keyframes shrink {
-    from {
-        min-width: 350px;
-    }
-
-    to {
-        min-width: 50px;
-    }
+    from { min-width: 400px; }
+    to   { min-width: 400px; }
 }
 
 @keyframes shrink {
-    from {
-        min-width: 350px;
-    }
-
-    to {
-        min-width: 50px;
-    }
-}
-
-@-webkit-keyframes fadeout {
-    from {
-        bottom: 30px;
-        opacity: 1;
-    }
-
-    to {
-        bottom: 60px;
-        opacity: 0;
-    }
+    from { min-width: 400px; }
+    to   { min-width: 50px;  }
 }
 
 @keyframes fadeout {
-    from {
-        bottom: 30px;
-        opacity: 1;
-    }
+    from { bottom: 30px; opacity: 1; }
+    to   { bottom: 0;    opacity: 0; }
+}
 
-    to {
-        bottom: 60px;
-        opacity: 0;
-    }
+@keyframes textfadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 @media (max-width: 1100px) {
@@ -1863,8 +1790,7 @@ blockquote {
     }
 }
 
-@media (prefers-reduced-motion: no-preference) and (max-width:) {
-
+@media (prefers-reduced-motion: no-preference) {
     main section {
         animation: fade-in 1s linear forwards;
         animation-timeline: view();

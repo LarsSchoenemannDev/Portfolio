@@ -43,13 +43,13 @@ const translations = {
 
     "error.name": "Bitte gib deinen Namen ein",
     "error.email": "Bitte gib deine E-Mail ein",
-    "error.message": "Deine Nachricht ist leer",
-    "error.policy": "Bitte akzeptiere die Datenschutzerklärung.",
+    "error.message": "Erfolgreich gesendet",
+    "error.policy": "Fehler beim Senden. Bitte erneut versuchen.",
 
     "footer.legal": "Impressum",
     "footer.privacy": "Datenschutz",
-    "footer.right": "Formular erfolgreich gesendet",
-    "footer.fetchError": "Leider ist ein Fehler aufgetretten",
+    "footer.right": "Nachricht erhalten — ich melde mich bald",
+    "footer.fetchError": "Etwas ist schiefgelaufen. Versuch es nochmal.",
   },
 
   en: {
@@ -101,8 +101,8 @@ const translations = {
 
     "footer.legal": "Legal notice",
     "footer.privacy": "PrivacyPolicy",
-    "footer.right": "Form submitted successfully",
-    "footer.fetchError": "Unfortunately, an error occurred.",
+    "footer.right": "I'll get back to you soon",
+    "footer.fetchError": "Something went wrong. Give it another shot.",
   }
 };
 

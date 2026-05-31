@@ -286,14 +286,24 @@ function postMessage() {
         })
 }
 
+/**
+ * Displays the success toast notification.
+ * The toast animates in, stays visible, then fades out automatically.
+ * Total visible duration: 5000ms.
+ */
 function launchToast() {
     var x = document.getElementById("toast")
     x.className = "show";
-    setTimeout(function () { x.className = x.className.replace("show", ""); }, 50000);
+    setTimeout(function () { x.className = x.className.replace("show", ""); }, 9000);
 }
 
+/**
+ * Displays the error toast notification.
+ * The toast animates in, stays visible, then fades out automatically.
+ * Total visible duration: 5000ms.
+ */
 function errorLaunchToast() {
     var x = document.getElementById("toastError")
     x.className = "show";
-    setTimeout(function () { x.className = x.className.replace("show", ""); }, 5000);
+    setTimeout(function () { x.className = x.className.replace("show", ""); }, 9000);
 }
