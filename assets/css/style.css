@@ -176,7 +176,8 @@ body,
     flex-direction: column;
     align-items: center;
     flex: 1;
-    gap: 85px;
+    /* gap: 60px;
+    margin-top: 70px; */
 }
 
 .menu-item {
@@ -280,7 +281,7 @@ body,
 .overlay-footer {
     background: var(--color-primary);
     clip-path: polygon(0 0, 100% 35%, 100% 100%, 0 100%);
-    padding-top: 96px;
+    /* padding-top: 96px; */
 }
 
 .wrapper {
@@ -1635,9 +1636,14 @@ blockquote {
     }
 }
 
+@media (max-width: 990px) {
+    .skills-footer-wrapper {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 840px) {
     .scale-wrapper {
-
         h1 {
             font-size: var(--fs-78);
         }
@@ -1715,6 +1721,19 @@ blockquote {
 }
 
 @media (max-width: 550px) {
+
+    #aboutME,
+    #portfolio {
+        scroll-margin-top: 20vh;
+    }
+
+    #portfolio {
+        scroll-margin-top: 20vh;
+    }
+
+    #mySkills {
+        scroll-margin-top: 25vh;
+    }
 
     .left-side {
         svg {
@@ -1805,6 +1824,12 @@ blockquote {
     }
 }
 
+@media(max-height: 980px) {
+    .overlay-nav {
+        gap: 20px;
+    }
+}
+
 @media (orientation: landscape) and (max-width: 1220px) {
     .header-main {
         margin-top: 60px;
@@ -1838,7 +1863,7 @@ blockquote {
     }
 }
 
-@media (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference) and (max-width:) {
 
     main section {
         animation: fade-in 1s linear forwards;

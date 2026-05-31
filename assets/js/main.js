@@ -13,6 +13,11 @@ const valid = { name: false, mail: false, message: false, policy: false };
 let currentLang = "de"
 
 /**
+ * State of Header Svg animation 
+ */
+let animateState = false;
+
+/**
  * Updates the documents language attribute and applies localized strings.
  */
 function setLanguage() {
@@ -115,14 +120,21 @@ function toggleMenu() {
 function playSvgAnimation(showGroup, hideGroup) {
     const framesToShow = document.querySelectorAll(showGroup);
     const framesToHide = document.querySelectorAll(hideGroup);
+    if (animateState) {     
+        return;
+    }
     framesToHide.forEach(svg => svg.classList.add("hidden"));
+    animateState = true
     framesToShow.forEach((svg, index) => {
         setTimeout(() => {
             framesToShow.forEach(s => s.classList.add("hidden"));
             svg.classList.remove("hidden");
-        }, index * 180);
+            if (index === framesToShow.length - 1) {
+                animateState = false;
+            }
+        }, index * 150);        
     });
-}
+};
 
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
@@ -277,11 +289,11 @@ function postMessage() {
 function launchToast() {
     var x = document.getElementById("toast")
     x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 50000);
+    setTimeout(function () { x.className = x.className.replace("show", ""); }, 50000);
 }
 
 function errorLaunchToast() {
     var x = document.getElementById("toastError")
     x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+    setTimeout(function () { x.className = x.className.replace("show", ""); }, 5000);
 }
