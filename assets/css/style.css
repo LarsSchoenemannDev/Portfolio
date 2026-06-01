@@ -12,6 +12,21 @@
     font-style: normal;
 }
 
+#mainStart,
+#aboutME,
+#mySkills,
+#references {
+    scroll-margin-top: 30vh;
+}
+
+#portfolio {
+    scroll-margin-top: 25vh;
+}
+
+#contact {
+    scroll-margin-top: 10vh;
+}
+
 header {
     position: fixed;
     z-index: 1000;
@@ -139,7 +154,7 @@ body,
     top: 0;
     left: 0;
     width: 100%;
-    height: 100dvh;
+    max-height: 100dvh;
     background-color: var(--color-bg);
     z-index: 999;
     transform: translateY(-100%);
@@ -176,8 +191,7 @@ body,
     align-items: center;
     flex: 1;
     overflow-y: auto;
-    /* gap: 60px;
-    margin-top: 70px; */
+    gap: clamp(24px, 8vh, 100px)
 }
 
 .menu-item {
@@ -196,7 +210,7 @@ body,
     line-height: 100%;
     text-align: center;
     display: block;
-    padding: 32px 32px;
+    padding: clamp(12px, 3vh, 24px) 24px;
 }
 
 .menu-item a::before {
@@ -277,16 +291,16 @@ body,
     }
 }
 
-
 .overlay-footer {
     background: var(--color-primary);
-    clip-path: polygon(0 0, 100% 35%, 100% 100%, 0 100%);
-    flex-shrink: 0;
+    clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 100%);
+    max-height: 340px;
+    min-height: clamp(200px, 35vh, 330px);
 }
 
 .wrapper {
-    padding: 48px max(calc(50% - 720px));
-    
+    padding: max(calc(50% - 720px), 24px);
+    padding-top: clamp(3.5rem, 18vh, 7rem);
 }
 
 .say-hi {
@@ -297,7 +311,7 @@ body,
     font-size: var(--fs-78);
     line-height: 100%;
     text-align: inherit;
-    margin-bottom: 24px;
+    margin-bottom: clamp(12px, 2vh, 24px);
     text-decoration: none;
 }
 
@@ -754,7 +768,7 @@ article {
 .arrow-left-side {
     display: flex;
     justify-content: flex-start;
-    height: 280px;
+    height: 240px;
     max-width: fit-content;
     animation: moveDiagonalTwo 3.5s linear forwards infinite;
 }
@@ -1142,13 +1156,12 @@ blockquote {
 .contact-wrapper {
     background: var(--color-primary);
     clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0% 100%);
-
+    max-height: auto;
 }
 
 .contact-section {
     position: relative;
     padding: 64px max(calc(50% - 720px), 64px);
-
     color: var(--color-bg);
     display: flex;
     justify-content: center;
@@ -1158,7 +1171,8 @@ blockquote {
 .contact-heading {
     font-size: 80px;
     font-weight: 900;
-    color: var(--color-bg)
+    color: var(--color-bg);
+    padding-top: 60px;
 }
 
 .contact-inner {
@@ -1267,6 +1281,13 @@ blockquote {
     outline: none;
     width: 100%;
     margin: 4px;
+}
+
+.contact-form input[type="text"]:-webkit-autofill,
+.contact-form input[type="email"]:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px rgb(0, 0, 0) inset !important;
+    box-shadow: 0 0 0px 1000px rgb(0, 0, 0) inset !important;
+    -webkit-text-fill-color: var(--color-bg) !important;
 }
 
 .contact-form textarea {
@@ -1487,10 +1508,10 @@ blockquote {
 #toastError.show {
     visibility: visible;
     animation: fadein 0.5s forwards,
-               expand  0.5s 0.5s forwards,
-               stay    3s   1s   forwards,
-               shrink  0.5s 4s   forwards,
-               fadeout 0.5s 4.5s forwards;
+        expand 0.5s 0.5s forwards,
+        stay 3s 1s forwards,
+        shrink 0.5s 4s forwards,
+        fadeout 0.5s 4.5s forwards;
 }
 
 #toast.show #desc,
@@ -1499,33 +1520,74 @@ blockquote {
 }
 
 @keyframes fadein {
-    from { bottom: 0;    opacity: 0; }
-    to   { bottom: 30px; opacity: 1; }
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
 }
 
 @keyframes expand {
-    from { min-width: 50px;  }
-    to   { min-width: 400px; }
+    from {
+        min-width: 50px;
+    }
+
+    to {
+        min-width: 400px;
+    }
 }
 
 @keyframes stay {
-    from { min-width: 400px; }
-    to   { min-width: 400px; }
+    from {
+        min-width: 400px;
+    }
+
+    to {
+        min-width: 400px;
+    }
 }
 
 @keyframes shrink {
-    from { min-width: 400px; }
-    to   { min-width: 50px;  }
+    from {
+        min-width: 400px;
+    }
+
+    to {
+        min-width: 50px;
+    }
 }
 
 @keyframes fadeout {
-    from { bottom: 30px; opacity: 1; }
-    to   { bottom: 0;    opacity: 0; }
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
 }
 
 @keyframes textfadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1350px) {
+    .contact-section {
+        padding-top: 100px;
+    }
+
 }
 
 @media (max-width: 1100px) {
@@ -1564,12 +1626,25 @@ blockquote {
 }
 
 @media (max-width: 990px) {
+
+    #mainStart,
+    #aboutME,
+    #mySkills,
+    #references {
+        scroll-margin-top: 16vh;
+    }
+
+    #contact {
+        scroll-margin-top: 10vh;
+    }
+
     .skills-footer-wrapper {
         flex-direction: column;
     }
 }
 
 @media (max-width: 840px) {
+
     .scale-wrapper {
         h1 {
             font-size: var(--fs-78);
@@ -1743,6 +1818,10 @@ blockquote {
         flex-direction: column;
         gap: 92px;
     }
+
+    .contact-wrapper {
+        clip-path: polygon(0 0%, 100% 3%, 100% 100%, 0% 100%);
+    }
 }
 
 @media (max-height: 1000px) {
@@ -1753,7 +1832,23 @@ blockquote {
 
 @media(max-height: 980px) {
     .overlay-nav {
-        gap: 20px;
+        margin-top: -25px;
+    }
+
+    .overlay-nav {
+        gap: 0;
+    }
+
+    .nav-overlay-inner {
+        padding-top: 60px;
+    }
+
+    .overlay-footer {
+        clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 100%);
+    }
+
+    .overlay-icons>a {
+        padding: 10px 20px;
     }
 }
 
