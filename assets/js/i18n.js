@@ -8,7 +8,9 @@ const translations = {
     "hero.title": "Frontend<br>Entwickler",
 
     "about.heading": "Über mich",
-    "about.text": "Irgendwann fing ich an, Webseiten auseinanderzunehmen einfach um zu verstehen, wie sie funktionieren. Heute baue ich sie selbst – mit HTML, CSS und JavaScript. Seitdem lerne ich ständig dazu und suche immer nach der saubersten Lösung.",
+    "about.text": "Ich habe angefangen, Webseiten nicht nur zu nutzen, sondern zu verstehen indem ich sie auseinandernehme und analysiere, wie sie aufgebaut sind.",
+    "about.text1": "Heute entwickle ich eigene Webanwendungen mit HTML, CSS und JavaScript und erweitere mein Wissen kontinuierlich in Richtung moderner Frontend-Technologien",
+    "about.text2": "Aktuell liegt mein Fokus auf der Entwicklung sauber strukturierter und nutzerfreundlicher Interfaces. Dabei arbeite ich bereits mit TypeScript, REST-APIs und modernen UI-Ansätzen und setze meine Projekte selbstständig um, um praktische Erfahrung im Frontend-Development aufzubauen.",
     "about.location": "Wohnhaft in Rinteln",
     "about.remote": "Offen für Remote-Arbeit",
     "about.cta": "Kontakt aufnehmen",
@@ -61,7 +63,9 @@ const translations = {
     "hero.title": "Frontend<br>Developer",
 
     "about.heading": "About me",
-    "about.text": "At some point I started taking websites apart just to understand how they work. Today I build them myself with HTML, CSS and JavaScript. Since then I've been constantly improving and always looking for the cleanest solution.",
+    "about.text": "My journey began with a curiosity to understand how the web works—breaking down existing websites to analyze their core structure.",
+    "about.text1": "Today, I build my own web applications with HTML, CSS, and JavaScript, constantly pushing into modern frontend technologies.",
+    "about.text2": "My current focus lies in crafting clean, structured, and user-centric interfaces. By leveraging TypeScript and REST APIs in my independent projects, I turn theory into practical, production-ready frontend experience.",
     "about.location": "Based in Rinteln",
     "about.remote": "Open to work Remote",
     "about.cta": "Let's talk",
